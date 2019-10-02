@@ -1,7 +1,8 @@
-### Project Name:
-Get jobs easily with AI
 
-### [Github webpage:](https://group3seg.github.io/my_first_website/)
+### Project Name:
+Get jobs easily with AI :computer: :bar_chart:
+
+### [Project Website:](https://group3seg.github.io/my_first_website/)
 https://group3seg.github.io/my_first_website/
 
 
