@@ -4,10 +4,10 @@
 ### Project Name:
 AI Resume Builder 💻 📊
 
-### [Group GitHub Account]: (https://github.com/NNG2000)
+### [Group GitHub Account](https://github.com/NNG2000)
 https://github.com/NNG2000 
 
-### [Project Website]:(https://group3seg.github.io/my_first_website/)
+### [Project Website](https://group3seg.github.io/my_first_website/)
 https://group3seg.github.io/my_first_website/
 
 ### Project Description:
