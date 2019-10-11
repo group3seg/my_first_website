@@ -1,7 +1,62 @@
-body {
-    background-color: red;
-};
+  .footer{
+    position:fixed;
+    bottom:0;
+    padding-bottom:7px;
+    text-align:center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:12px;
+    width:100%;
+    }
+  }
 
-h1 {
+  body {
+    background: white fixed;
+  }
 
-};
+  .logo {
+      text-align: left;
+      padding-left: 70px;
+      padding-top:70px;
+      padding-bottom:70px;
+      font-family: 'Open Sans', sans-serif;
+      color: white;
+  }
+
+  .unison {
+    font-size: 70px;
+  }
+
+  body {
+    background-color: white;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+  }
+  .topnav {
+    overflow: hidden;
+    background-color: rgb(107, 105, 105);
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+  }
+  .topnav a {
+    float: left;
+    color: white;
+    text-align:center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+  }
+  .topnav a:hover {
+    background-color:white;
+    color: black;
+  }
+  .topnav a.active {
+    background-color: #338BFF;
+    color: white;
+  }
+  .topnav a.logo {
+    float: left;
+    margin-left:10px;
+  }
