@@ -4,9 +4,9 @@
       <title>Unison</title>
   </head>
 
-  <body>
+  <body class="background">
   <div class="topnav">
-    <a class="logo" href="#logo"><img src="U-of-O-logo.png" length="40" width="40"></a>
+    <!-- <a class="logo" href="#logo"><img src="U-of-O-logo.png" length="40" width="40"></a> -->
     <a href="#contact">Contact us</a>
     <a href="#about">About us</a>
     <a href="#story">Story-Team</a>
@@ -14,18 +14,60 @@
     <a class="active" href="#home">Home</a>
   </div>
 
-  <div style="padding-left:16px">
-    <h1>Unison</h1>
-    <h2>By Crescendo</h2>
+  <div class="logo">
+    <h1 class="unison">Unison</h1>
+    <h2 class="crescendo">By Crescendo</h2>
   </div>
 
+  <div>
+  <footer class="footer"> &#169 Copyright 2019 </footer>
+  </div>
   </body>
 
   <!-- Add some style to the page-->
   <style>
+  
+  .footer{
+    position:fixed;
+    bottom:0;
+    padding-bottom:5px;
+    text-align:center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:14px;
+    width:100%;
+    display:block;
+}
+  }
+
   body {
+      background: white fixed;
+  }
+
+  .logo {
+      text-align: left;
+      padding-left:5px;
+  }
+  
+  .crescendo {
+    margin-top: 5px;
+    color:#73325d;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size:20px;
+  }
+  
+  .unison {
+    margin-bottom: 5px;
+    color:#73325d;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+  }
+
+  body {
+    background-color: white;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
   }
   .topnav {
     overflow: hidden;
@@ -33,14 +75,14 @@
   }
   .topnav a {
     float: right;
-    color: #f2f2f2;
-    text-align: center;
+    color: white;
+    text-align:center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
   }
   .topnav a:hover {
-    background-color: #ddd;
+    background-color:white;
     color: black;
   }
   .topnav a.active {
