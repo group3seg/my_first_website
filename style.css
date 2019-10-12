@@ -1,67 +1,75 @@
-  .footer{
-    position:fixed;
-    bottom:0;
-    padding-bottom:7px;
-    text-align:center;
+/* Remove margin from body*/
+body {
+    margin:0;
     font-family: 'Raleway', sans-serif;
-    font-size:15px;
-    width:100%;
-    }
-  }
+}
 
-  body {
-    background: white fixed;
-  }
-
-  .logo {
-      text-align: left;
-      padding-left: 70px;
-      padding-top:1px;
-      padding-bottom:45px;
-      font-family: 'Raleway', sans-serif;
-      color: white;
-  }
-
-  .unison {
-    font-size: 80px;
-  }
-
-  body {
-    background-color: white;
-    margin: 0;
-    font-family: 'Raleway', sans-serif;
-    font-size: 25px;
-  }
-
-  .topnav {
-    overflow: hidden;
-    background-color: rgb(99, 97, 97);
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-  }
-
-  .topnav a {
-    float: left;
+/* Header/Blog Title */
+.header {
+    background: rgb(92, 92, 92);
+    text-align:left;
     color: white;
+    padding: 30px;
+}
+
+/*Style the top navigation bar*/
+.topnav {
+    overflow:hidden;
+    background-color:rgb(58, 58, 58);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Style the top navigation links */
+.topnav a {
+    float:left;
+    display:block;
+    color:white;
     text-align:center;
-    padding: 14px 16px;
+    padding:14px 16px;
     text-decoration: none;
-    font-size: 25px;
-  }
+}
 
-  .topnav a:hover {
+/* Change navigation link color at mouse hover*/
+.topnav a:hover {
     background-color:white;
-    color: black;
-  }
+    color:black;
+}
 
-  .topnav a.active {
-    background-color: #338BFF;
-    color: white;
-  }
+/* Current navigation link*/
+.topnav a.current {
+    background-color:rgb(129, 188, 255);
+}
 
-  .topnav a.logo {
-    float: left;
-    margin-left:10px;
+/*Style the bottom navigation bar*/
+.botnav {
+    overflow:hidden;
+    background-color:rgb(58, 58, 58);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Style the bottom navigation links */
+.botnav a {
+    float:left;
+    display:block;
+    color:white;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration: none;
+    float:bottom;
+    bottom: 0;
+}
+
+/* Footer */
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color:white;
+    font-size:13px;
   }
-  
