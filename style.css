@@ -1,7 +1,75 @@
+/* Remove margin from body*/
 body {
-    background-color: red;
-};
+    margin:0;
+    font-family: 'Raleway', sans-serif;
+}
 
-h1 {
+/* Header/Blog Title */
+.header {
+    background: rgb(92, 92, 92);
+    text-align:left;
+    color: white;
+    padding: 30px;
+}
 
-};
+/*Style the top navigation bar*/
+.topnav {
+    overflow:hidden;
+    background-color:rgb(58, 58, 58);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Style the top navigation links */
+.topnav a {
+    float:left;
+    display:block;
+    color:white;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration: none;
+}
+
+/* Change navigation link color at mouse hover*/
+.topnav a:hover {
+    background-color:white;
+    color:black;
+}
+
+/* Current navigation link*/
+.topnav a.current {
+    background-color:rgb(129, 188, 255);
+}
+
+/*Style the bottom navigation bar*/
+.botnav {
+    overflow:hidden;
+    background-color:rgb(58, 58, 58);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Style the bottom navigation links */
+.botnav a {
+    float:left;
+    display:block;
+    color:white;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration: none;
+    float:bottom;
+    bottom: 0;
+}
+
+/* Footer */
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color:white;
+    font-size:13px;
+  }
