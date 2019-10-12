@@ -1,7 +1,9 @@
 function setup() {
-  // put setup code here
+	var myCanvas = createCanvas(400, 400);
+	myCanvas.parent("animation");
 }
 
 function draw() {
-  // put drawing code here
+	background(255, 0, 0);
+	ellipse(200, 200, 50, 50);
 }
