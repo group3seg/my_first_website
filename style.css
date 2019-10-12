@@ -5,6 +5,7 @@ body {
 }
 /* Header/Blog Title */
 .header {
+    position: relative;
     background: rgb(92, 92, 92);
     text-align:left;
     color: white;
