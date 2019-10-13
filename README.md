@@ -19,10 +19,10 @@ https://github.com/intelligentofficial
 ### [Repositories GitHub Account:](https://github.com/intelligentofficial/unison)
 https://github.com/intelligentofficial/unison
 
-### [Project Website:](https://intelligentofficial.github.io/AI_resume_builder/)
+### [Project Website:](https://intelligentofficial.github.io/unison/)
 https://intelligentofficial.github.io/unison/
 
-### [README.md:](https://github.com/intelligentofficial/AI_resume_builder/blob/master/README.md)
+### [README.md:](https://github.com/intelligentofficial/unison/blob/master/README.md)
 https://github.com/intelligentofficial/unison/blob/master/README.md
 
 
