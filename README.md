@@ -16,7 +16,7 @@ Features:
 ### [Organization GitHub Account:](https://github.com/intelligentofficial)
 https://github.com/intelligentofficial
 
-### [Repositories GitHub Account:](https://github.com/intelligentofficial/AI_resume_builder)
+### [Repositories GitHub Account:](https://github.com/intelligentofficial/unison)
 https://github.com/intelligentofficial/unison
 
 ### [Project Website:](https://intelligentofficial.github.io/AI_resume_builder/)
