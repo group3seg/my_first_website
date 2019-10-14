@@ -1,23 +1,30 @@
 ### Group Number:
 3
 
-### Project Name:
-AI Resume Builder 💻 📊
+### Project and Team Name:
+Unison
+
+### Project Description:
+Unison is an online cross-compatible platform that offers musicians (producers, sound engineers, songwriters, vocalists, etc.) a cloud-based collaborative environment. It allows musicians to publicly or privately share their DAW-based projects (digital audio workstation) on the cloud, allowing anyone to edit their own version.
+
+Features:
+- By making Unison compatible with most popular DAWs (FL Studio, Logic Pro, Ableton, GarageBand), Unison helps musicians working on different local platforms to merge their work into one single project on the cloud.
+- Unison converts local DAW files to a cross-compatible intermediary project using AI technology without loss of information. The intermediary project can be modified and improved by others on any DAW.
+- Based on the GitHub model, you can pull intermediary projects from the cloud on the local DAW that you prefer, or push pieces of your local projects to the cloud for others to work on using their preferred DAW.
+- You can work on branches and versions of the same project and merge them into one final project.
 
 ### [Organization GitHub Account:](https://github.com/intelligentofficial)
 https://github.com/intelligentofficial
 
-### [Repositories GitHub Account:](https://github.com/intelligentofficial/AI_resume_builder)
-https://github.com/intelligentofficial/AI_resume_builder
+### [Repositories GitHub Account:](https://github.com/intelligentofficial/unison)
+https://github.com/intelligentofficial/unison
 
-### [Project Website:](https://intelligentofficial.github.io/AI_resume_builder/)
-https://intelligentofficial.github.io/AI_resume_builder/
+### [Project Website:](https://intelligentofficial.github.io/unison/)
+https://intelligentofficial.github.io/unison/
 
-### [README.md:](https://github.com/intelligentofficial/AI_resume_builder/blob/master/README.md)
-https://github.com/intelligentofficial/AI_resume_builder/blob/master/README.md
+### [README.md:](https://github.com/intelligentofficial/unison/blob/master/README.md)
+https://github.com/intelligentofficial/unison/blob/master/README.md
 
-### Project Description:
-Our project is a platform (a website) which uses artificial intelligence (AI) technologies to assist you in finding a job. Based on the information that you give to the AI and based on multiple job descriptions, our platform will give you a list of the best jobs you should apply on (the jobs that matches best with the information you entered). The AI will then make a personalized resume and write a cover letter based on the employer needs/job description and on your past working experiences/interests/other factors. It will also predict your chances of getting selected based on the profile of the other people that work in that specific company.
 
 ### Members' Accounts:
  - Géraud Ndagang Nguimfack: [NNG2000](https://github.com/NNG2000)
