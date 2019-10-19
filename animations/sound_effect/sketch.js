@@ -1,8 +1,7 @@
 let mic, fft;
-var validate = true;
-
-var inc = 0.01;
-var time = 0;
+// noise.seed(Math.random());
+const inc = 0.01;
+let time = 0;
 var record = false;
 
 function setup() {
@@ -19,10 +18,6 @@ function draw() {
   colorMode(HSB, 255, 255, 255);
   
   let spectrum = fft.analyze();
-  if (validate == true){
-    validate = false;
-    console.log(spectrum)
-  }
 
   let yoff = 1;
   loadPixels();
@@ -36,10 +31,12 @@ function draw() {
 
     for (let y = width; y > bar_height; y--){
       let index = (x + y * width) * 4;
+      // noiseDetail(8, 0.65)
       let n = noise(xoff, yoff, time);
-      pixels[index + 0] = r * n;
-      pixels[index + 1] = g * n;
-      pixels[index + 2] = b * n;
+      // n = 0.9;
+      pixels[index + 0] = r * (n+0.1);
+      pixels[index + 1] = g * (n+0.1);
+      pixels[index + 2] = b * (n+0.1);
       xoff += inc;
     }
     yoff += inc;
@@ -48,6 +45,7 @@ function draw() {
   if (record) {
     // console.log(pixels.length);
     // console.log("1 est : " + width*height)
+    // console.log(spectrum)
     console.log("red : " + red(col) + "green : " + green(col) + "blue : " + blue(col));
   }
   updatePixels();
