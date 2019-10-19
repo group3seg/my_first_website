@@ -27,7 +27,9 @@ function draw() {
   } 
   for (i = 0;i < width; i += 1){
     let new_height = map(spectrum[i], 0, 255, height, 0);
-    stroke(color(map(i, 0, width, 0, 255), 255, 255));
+    col = color(0, 255, 255)
+    stroke(color(map(i, 0, width, 0, 235), 255, 255));
+
     line(i, height, i, new_height);
   }
   endShape();
@@ -47,8 +49,9 @@ function draw() {
   }
   time += 0.1;
   if (record) {
-    console.log(pixels.length);
-    console.log("1 est : " + width*height)
+    // console.log(pixels.length);
+    // console.log("1 est : " + width*height)
+    console.log("red : " + red(col) + "green : " + green(col) + "blue : " + blue(col));
   }
   updatePixels();
 }
