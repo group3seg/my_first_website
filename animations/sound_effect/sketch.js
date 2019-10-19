@@ -24,19 +24,19 @@ function draw() {
     console.log(spectrum)
   }
 
-  var yoff = 1;
+  let yoff = 1;
   loadPixels();
-  for (var x = 0; x < width; x++) {
-    var xoff = 1;
-    var bar_height = map(spectrum[x], 0, 255, height, 0);
-    var col = color(map(x, 0, width, 0, 235), 255, 255);
-    var r = red(col);
-    var g = green(col);
-    var b = blue(col)
+  for (let x = 0; x < width; x++) {
+    let xoff = 1;
+    let bar_height = map(spectrum[x], 0, 255, height, 0);
+    let col = color(map(x, 0, width, 0, 235), 255, 255);
+    let r = red(col);
+    let g = green(col);
+    let b = blue(col)
 
-    for (var y = width; y > bar_height; y--){
-      var index = (x + y * width) * 4;
-      var n = noise(xoff, yoff, time);
+    for (let y = width; y > bar_height; y--){
+      let index = (x + y * width) * 4;
+      let n = noise(xoff, yoff, time);
       pixels[index + 0] = r * n;
       pixels[index + 1] = g * n;
       pixels[index + 2] = b * n;
