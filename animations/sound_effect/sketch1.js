@@ -4,6 +4,7 @@ var validate = true;
 var inc = 0.01;
 var time = 0;
 var record = false;
+var bar_width = 10;
 
 function setup() {
   createCanvas(710, 400);
@@ -14,6 +15,7 @@ function setup() {
   fft = new p5.FFT();
   fft.setInput(mic);
 }
+
 function draw() {
   background(0);
   colorMode(HSB, 255, 255, 255);
@@ -22,28 +24,29 @@ function draw() {
   if (validate == true){
     validate = false;
     console.log(spectrum)
-  }
+  } 
+  for (i = 0;i < width; i += 1){
+    let new_height = map(spectrum[i], 0, 255, height, 0);
+    col = color(0, 255, 255)
+    stroke(color(map(i, 0, width, 0, 235), 255, 255));
 
+    line(i, height, i, new_height);
+  }
+  endShape();
   var yoff = 1;
   loadPixels();
   for (var x = 0; x < width; x++) {
     var xoff = 1;
-    var bar_height = map(spectrum[x], 0, 255, height, 0);
-    var col = color(map(x, 0, width, 0, 235), 255, 255);
-    var r = red(col);
-    var g = green(col);
-    var b = blue(col)
-
-    for (var y = width; y > bar_height; y--){
+    for (var y = 0; y < height; y++){
       var index = (x + y * width) * 4;
-      var n = noise(xoff, yoff, time);
-      pixels[index + 0] = r * n;
-      pixels[index + 1] = g * n;
-      pixels[index + 2] = b * n;
+      var r = noise(xoff, yoff, time) * 255;
+      pixels[index + 0] *= r/255;
+      pixels[index + 1] *= r/255;
+      pixels[index + 2] *= r/255;
       xoff += inc;
     }
     yoff += inc;
-  }	
+  }
   time += 0.1;
   if (record) {
     // console.log(pixels.length);
