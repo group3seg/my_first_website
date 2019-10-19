@@ -1,7 +1,7 @@
 /* Remove margin from body*/
 body {
     margin:0;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Maven Pro', sans-serif;
 }
 
 /* Style title of page */
@@ -18,24 +18,23 @@ div.header p {
 }
 /* Header/Blog Title */
 .header {
-    background: rgb(92, 92, 92);
-    text-align:left;
+    background-repeat: no-repeat;
+    text-align:center;
     color: white;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 70px;
+}
+
+.top {
+    background-color:rgb(58, 58, 58);
 }
 
 /*Style the top navigation bar*/
 .topnav {
     overflow:hidden;
-    background-color:rgb(58, 58, 58);
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     width: 100%;
-    /* can include shadow: box-shadow: 0px 5px 5px grey; */
-    
+    font-size: 20px;
 }
 
 /* Style the top navigation links */
@@ -64,6 +63,7 @@ div.header p {
     overflow:hidden;
     background-color:rgb(58, 58, 58);
     width: 100%;
+    font-size: 20px;
 }
 
 /* Style the bottom navigation links */
@@ -78,7 +78,7 @@ div.header p {
 
 /* Style all font awesome icons */
 .fa {
-    font-size:20px;
+    font-size:28px;
     width: 50px;
     text-align: center;
     text-decoration: none;
