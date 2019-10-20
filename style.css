@@ -11,6 +11,8 @@ div.header h1 {
     font-weight:bold;
     width: 100vw;
     height: 100vw;
+    margin: 0px;
+    padding-top: 80px;
 
 }
 
@@ -47,6 +49,7 @@ div.header p {
     color:white;
     text-align:center;
     padding:14px 16px;
+
     text-decoration: none;
 }
 
@@ -89,6 +92,6 @@ div.header p {
 
 /* Change navigation link color at mouse hover*/
 .botnav a:hover {
-    background-color:white;
+    background-color: white;
     color:black;
 }
