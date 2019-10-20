@@ -27,7 +27,7 @@ function draw() {
   } 
   for (i = 0;i < width; i += 1){
     let new_height = map(spectrum[i], 0, 255, height, 0);
-    col = color(0, 255, 255)
+    col = color(0, 255, 255);
     stroke(color(map(i, 0, width, 0, 235), 255, 255));
 
     line(i, height, i, new_height);
