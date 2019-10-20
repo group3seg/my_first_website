@@ -73,14 +73,15 @@ result = (((result - np.min(result)) * (1 - 0.4)) / (np.max(result) - np.min(res
 
 img_array = []
 
-fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter('output.avi',fourcc, 24.0, (1000,579))
+fourcc = cv2.VideoWriter_fourcc('M','J','P','G')
+out = cv2.VideoWriter('a.avi',fourcc, 24.0, (1000,579))
 
 
 for c, i in enumerate(lst):
-	windows = cv2.cvtColor(result[c], cv2.COLOR_GRAY2BGR)/255
+	windows = cv2.cvtColor(result[c], cv2.COLOR_GRAY2BGR)
 
-	bars_hsv = np.zeros((height, width, 3))
+
+	bars_hsv = np.zeros((height, width, 3), dtype='uint8')
 
 
 	for c1, e in enumerate(i):
@@ -100,30 +101,38 @@ for c, i in enumerate(lst):
 
 		bars_hsv = cv2.line(bars_hsv, (c1,int(new_height*1.2)), (c1, height), (h_color, 255, 255), 1)
 		
-	bars_bgr = cv2.cvtColor(np.uint8(bars_hsv), cv2.COLOR_HSV2BGR)
-	final = bars_bgr * windows
+	bars_bgr = cv2.cvtColor(bars_hsv, cv2.COLOR_HSV2BGR)
+	final = (np.float32(bars_bgr) * np.float32(windows))
+	final = np.uint8(final)
+	cv2.imshow("img", final)
+	cv2.waitKey(1)
+
 	# print(np.min(windows))
 	# print(np.max(windows))
 
 
 	final = cv2.GaussianBlur(image_resize(final, width=1000), (31, 31), 15)
-	img_array.append(final)
+	print(final.shape)
+	# img_array.append(final)
+	# img = final.astype('uint8')
+	
+	out.write(final)
 
 	
 
 # cv2.destroyAllWindows()
-print(final.shape)
-img_array += img_array [::-1]
+# print(final.shape)
+# img_array += img_array [::-1]
 
-for img in img_array:
-	img = np.float64(img)
-	print(img.dtype)
-	print(img.shape)
-	cv2.imshow("win",img)
-	cv2.waitKey(1)
+# for img in img_array:
+# 	img = np.float64(img)
+# 	print(img.dtype)
+# 	print(img.shape)
+# 	cv2.imshow("win",img)
+# 	cv2.waitKey(1)
 
-	img = img.astype('uint8')
-	out.write(img)
+# 	img = img.astype('uint8')
+# 	out.write(img)
 	
 cv2.destroyAllWindows()
 out.release()
