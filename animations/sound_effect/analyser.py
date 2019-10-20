@@ -47,11 +47,14 @@ import matplotlib.pyplot as plt
 
 
 from scipy import signal
-N = 512 #Number of point in the fft
+N = 516 #Number of point in the fft
 f, t, Sxx = signal.spectrogram(Audiodata, fs,window = signal.blackman(N),nfft=N)
+# f, t, Sxx = signal.spectrogram(Audiodata, 256, window=win_dpss, noverlap=FFT_OVERLAP)
+
 plt.figure()
 Sxx = 10*np.log10(Sxx)
-Sxx = np.around(Sxx.astype(int), decimals=1) + 108
+# Sxx = np.around(Sxx.astype('float16'), decimals=5)
+Sxx = Sxx.transpose()
 arr = Sxx.tolist()
 with open("data.txt", "w") as file:
 	file.write(str(arr))
@@ -65,7 +68,7 @@ print(t.shape)
 print(f.shape)
 print(len(arr))
 print(len(arr[0]))
-plt.pcolormesh(t, f,Sxx) # dB spectrogram
+plt.pcolormesh(f, t,Sxx) # dB spectrogram
 #plt.pcolormesh(t, f,Sxx) # Lineal spectrogram
 plt.ylabel('Frequency [Hz]')
 plt.xlabel('Time [seg]')
