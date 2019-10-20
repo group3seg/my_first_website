@@ -1,9 +1,9 @@
 from scipy.io import wavfile # scipy library to read wav files
 import numpy as np
 
-AudioName = "vignesh.wav" # Audio File
+AudioName = "/home/sebastien/Documents/my_first_website/animations/sound_effect/vignesh.wav" # Audio File
 fs, Audiodata = wavfile.read(AudioName)
-
+print(len(Audiodata))
 # Plot the audio signal in time
 import matplotlib.pyplot as plt
 # plt.plot(Audiodata)
@@ -48,8 +48,10 @@ import matplotlib.pyplot as plt
 
 from scipy import signal
 N = 516 #Number of point in the fft
+# f, t, Sxx = signal.spectrogram(Audiodata, fs,window = signal.blackman(N),nfft=N)
+# print(signal.blackman(N))
+print(len(signal.blackman(N)))
 f, t, Sxx = signal.spectrogram(Audiodata, fs,window = signal.blackman(N),nfft=N)
-# f, t, Sxx = signal.spectrogram(Audiodata, 256, window=win_dpss, noverlap=FFT_OVERLAP)
 
 plt.figure()
 Sxx = 10*np.log10(Sxx)

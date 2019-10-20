@@ -4,57 +4,63 @@ var index = 0;
 var time = 0;
 var inc = 0.01;
 
+var wanted_width = 0;
+var wanted_height = 150;
+
+var bar_width = 10;
+
+
 function setup() {
-	createCanvas(data[0].length, 300);
+	createCanvas(data[0].length, wanted_height);
   myLoop();
+
 
 }
 
 function myLoop () {           
-   setTimeout(function () {
-      // Code is here
+	setTimeout(function () {
+   // Code is here
 
-      // get the spectrum
-      if (index >= data.length){index = 0;} //reset the animation at the end
-      let spectrum = data[index];
-      index++;
-      
-      // initialize things
-      background(0);
-	    colorMode(HSB, 255, 255, 255);
-	  
+    // get the spectrum
+    if (index >= data.length){index = 0;} //reset the animation at the end
+    let spectrum = data[index];
+    index++;
+    
+    // initialize things
+    background(0);
+    colorMode(HSB, 255, 255, 255);
+  
 
-	    let yoff = 1;
-	    loadPixels();
+    let yoff = 1;
+    loadPixels();
 
-	    for (let x = 0; x < width; x++) {
-      
-	      let xoff = 1;
-	      let bar_height = map(spectrum[x], -150, 360, height, 0);
-	      let col = color(map(x, 0, spectrum.length, 0, 235), 255, 255);
-	      let r = red(col);
-	      let g = green(col);
-	      let b = blue(col)
+    for (let x = 0; x < width; x += bar_width) {
+    	
+      let xoff = 1;
+      let bar_height = map(spectrum[x], -150, 50, height, 0);
+      let col = color(map(x, 0, spectrum.length, 0, 235), 255, 255);
+      let r = red(col);
+      let g = green(col);
+      let b = blue(col)
 
-	      for (let y = 0; y < bar_height; y++){
-	        let inverted_y = height - y;
-	        let index = (x + inverted_y * width) * 4;
-	        // noiseDetail(8, 0.65)
-	        let n = noise(xoff, yoff, time);
-	        // n = 0.9;
-	        pixels[index + 0] = r * (n+0.5);
-	        pixels[index + 1] = g * (n+0.5);
-	        pixels[index + 2] = b * (n+0.5);
-	        xoff += inc;
-	      }
-      yoff += inc;
-    } 
+      for (let y = 0; y < bar_height; y++){
+        let inverted_y = height - y;
+        let index = (x + inverted_y * width) * 4;
+        // noiseDetail(8, 0.65)
+        let n = noise(xoff, yoff, time);
+        // n = 0.9;
+        pixels[index + 0] = r * (n+0.5);
+        pixels[index + 1] = g * (n+0.5);
+        pixels[index + 2] = b * (n+0.5);
+        xoff += inc;
+      }
+    	yoff += inc;
+  	} 
     time += 0.1;
-
     updatePixels();
 
       // call the function again
       myLoop();
 
-   }, 30) // delay before executing the function
+   }, 50) // delay before executing the function
 }
