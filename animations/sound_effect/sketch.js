@@ -10,11 +10,6 @@ function setup() {
   createCanvas(257, 400);
   noFill();
 
-  // mic = new p5.AudioIn();
-  // mic.start();
-  // fft = new p5.FFT();
-  // fft.setInput(mic);
-  // console.log(data[0].length)
   myFun()
 }
 async function myFun() {
@@ -24,7 +19,7 @@ async function myFun() {
     let spectrum = data[frame];
     console.log(spectrum.length);
     
-    await sleep(10);
+    await sleep(1000);
 
     background(0);
     colorMode(HSB, 255, 255, 255);
