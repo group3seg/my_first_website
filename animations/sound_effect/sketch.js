@@ -73,3 +73,9 @@ function myLoop () {
 
    }, 50) // delay before executing the function
 }
+
+function resize(){
+	wanted_width = window.innerWidth;
+	wanted_height = 150;
+	resizeCanvas(wanted_width, wanted_height, true)
+}
