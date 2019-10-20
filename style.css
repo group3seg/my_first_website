@@ -9,6 +9,9 @@ div.header h1 {
     font-size:100px;
     line-height:20px;
     font-weight:bold;
+    width: 100vw;
+    height: 100vw;
+
 }
 
 /* Style text in top of page */
