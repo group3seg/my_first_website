@@ -2,6 +2,40 @@ import cv2
 import numpy as np
 import pyfastnoisesimd as fns
 
+
+
+def image_resize(image, width = None, height = None, inter = cv2.INTER_AREA):
+    # initialize the dimensions of the image to be resized and
+    # grab the image size
+    dim = None
+    (h, w) = image.shape[:2]
+
+    # if both the width and height are None, then return the
+    # original image
+    if width is None and height is None:
+        return image
+
+    # check to see if the width is None
+    if width is None:
+        # calculate the ratio of the height and construct the
+        # dimensions
+        r = height / float(h)
+        dim = (int(w * r), height)
+
+    # otherwise, the height is None
+    else:
+        # calculate the ratio of the width and construct the
+        # dimensions
+        r = width / float(w)
+        dim = (width, int(h * r))
+
+    # resize the image
+    resized = cv2.resize(image, dim, interpolation = inter)
+
+    # return the resized image
+    return resized
+
+
 height = 150
 
 
@@ -21,11 +55,11 @@ seed = np.random.randint(2**31)
 N_threads = 4
 
 perlin = fns.Noise(seed=seed, numWorkers=N_threads)
-perlin.frequency = 0.02
+perlin.frequency = 0.05
 perlin.noiseType = fns.NoiseType.Perlin
-perlin.fractal.octaves = 4
+perlin.fractal.octaves = 8
 perlin.fractal.lacunarity = 2.1
-perlin.fractal.gain = 0.45
+perlin.fractal.gain = 0.2
 result = perlin.genAsGrid(shape)
 
 result = (((result - np.min(result)) * (1 - 0.4)) / (np.max(result) - np.min(result))) + 0.4
@@ -37,9 +71,10 @@ result = (((result - np.min(result)) * (1 - 0.4)) / (np.max(result) - np.min(res
 
 
 
+img_array = []
 
-
-
+fourcc = cv2.VideoWriter_fourcc(*'XVID')
+out = cv2.VideoWriter('output.avi',fourcc, 24.0, (1000,579))
 
 
 for c, i in enumerate(lst):
@@ -63,17 +98,32 @@ for c, i in enumerate(lst):
 		h_color = int((((OldValue - OldMin) * (NewMax - NewMin)) / (OldMax - OldMin)) + NewMin)
 		# print(h_color)
 
-		bars_hsv = cv2.line(bars_hsv, (c1,new_height), (c1, height), (h_color, 255, 255), 1)
+		bars_hsv = cv2.line(bars_hsv, (c1,int(new_height*1.2)), (c1, height), (h_color, 255, 255), 1)
 		
 	bars_bgr = cv2.cvtColor(np.uint8(bars_hsv), cv2.COLOR_HSV2BGR)
 	final = bars_bgr * windows
-	print(np.min(windows))
-	print(np.max(windows))
+	# print(np.min(windows))
+	# print(np.max(windows))
 
 
-	# final = bars_bgr * windows
+	final = cv2.GaussianBlur(image_resize(final, width=1000), (31, 31), 15)
+	img_array.append(final)
 
-	cv2.imshow("win",final)
+	
+
+# cv2.destroyAllWindows()
+print(final.shape)
+img_array += img_array [::-1]
+
+for img in img_array:
+	img = np.float64(img)
+	print(img.dtype)
+	print(img.shape)
+	cv2.imshow("win",img)
 	cv2.waitKey(1)
 
+	img = img.astype('uint8')
+	out.write(img)
+	
 cv2.destroyAllWindows()
+out.release()
