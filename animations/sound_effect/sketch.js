@@ -4,7 +4,7 @@ var index = 0;
 var time = 0;
 var inc = 0.01;
 
-var wanted_width = 1800;
+var wanted_width = window.innerWidth;
 var wanted_height = 150;
 
 var data_resolution = 2;
@@ -54,7 +54,7 @@ function myLoop () {
 
       for (let y = 0; y < bar_height; y++){
         let inverted_y = height - y;
-        let index = (new_x + inverted_y * wanted_width) * 4;
+        let index = (new_x + 7 + inverted_y * wanted_width) * 4;
         // noiseDetail(8, 0.65)
         let n = noise(xoff, yoff, time);
         // n = 0.9;
