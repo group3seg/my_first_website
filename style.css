@@ -9,8 +9,7 @@ div.header h1 {
     font-size:100px;
     line-height:20px;
     font-weight:bold;
-    width: 100vw;
-    height: 100vw;
+    height: 50vh;
     margin: 0px;
     padding-top: 80px;
 
@@ -29,7 +28,7 @@ div.header p {
 }
 
 .top {
-    background-color:rgb(58, 58, 58);
+    background-color: rgb(40, 40, 40);
 }
 
 /*Style the top navigation bar*/
@@ -38,8 +37,8 @@ div.header p {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    width: 100%;
     font-size: 20px;
+    background-color:rgb(58, 58, 58);
 }
 
 /* Style the top navigation links */
@@ -55,7 +54,7 @@ div.header p {
 
 /* Change navigation link color at mouse hover*/
 .topnav a:hover {
-    background-color:white;
+    background-color: rgb(150, 150, 150);
     color:black;
 }
 

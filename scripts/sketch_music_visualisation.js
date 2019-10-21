@@ -13,7 +13,8 @@ var data_resolution = 2;
 
 
 function setup() {
-	createCanvas(wanted_width, wanted_height);
+  let cnv = createCanvas(wanted_width, wanted_height);
+  cnv.parent("myContainer");
   myLoop();
 
 
@@ -29,7 +30,7 @@ function myLoop () {
     index++;
     
     // initialize things
-    background(0);
+    background('rgba(58, 58, 58, 0.1)');
     colorMode(HSB, 255, 255, 255);
   
 
