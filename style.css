@@ -46,10 +46,8 @@ div.dark-region p {
 
   
 .bg-image {
-    background-image: url("output-onlinepngtools.png");
-
     /* Add the blur effect */
-    filter: blur(1px);
+    filter: blur(3px);
     display: block;
     background-repeat: no-repeat;
     text-align:center;
@@ -60,11 +58,9 @@ div.dark-region p {
     background-size: cover;    
 }
 
-
-
 #myContainer{
  background-color: rgb(40, 40, 40);
- filter: blur(0.5px);
+ filter: blur(0.1px);
 }
 
 .logo {
@@ -92,7 +88,6 @@ div.dark-region p {
     color:white;
     text-align:center;
     padding:14px 16px;
-
     text-decoration: none;
 }
 
