@@ -26,14 +26,15 @@ div.dark-region p {
     text-align:center;
     color: white;
     height: 90vh;
-    background-image: url("output-onlinepngtools.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: url(output-onlinepngtools.png)
 }
 
 #myContainer{
  background-color: rgb(40, 40, 40);
+ position: absolute;
 }
 
 .logo {
