@@ -4,14 +4,13 @@ body {
     font-family: 'Maven Pro', sans-serif;
 }
 
-
 /* Style title of page */
 div.dark-region h1 {
     font-size:100px;
     line-height:20px;
     font-weight:bold;
     margin: 0px;
-    padding-top: 80px;
+    padding-top: 60px;
 }
 
 /* Style text in top of page */
@@ -37,15 +36,22 @@ div.dark-region p {
  background-color: rgb(40, 40, 40);
 }
 
-
+.logo {
+    width: 40px;
+    height: 40px;
+    float:left;
+}
 /*Style the top navigation bar*/
 .topnav {
     overflow:hidden;
-    position: -webkit-sticky;
-    position: sticky;
     top: 0;
     font-size: 20px;
     background-color:rgb(40, 40, 40);
+}
+
+.together {
+    font-weight: bold;
+    color:rgb(185, 172, 255)
 }
 
 /* Style the top navigation links */
