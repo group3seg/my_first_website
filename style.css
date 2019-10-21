@@ -5,13 +5,6 @@ body {
 }
 
 
-.dark-region {
-    background-image: url("output-onlinepngtools.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 /* Style title of page */
 div.dark-region h1 {
     font-size:100px;
@@ -19,7 +12,6 @@ div.dark-region h1 {
     font-weight:bold;
     margin: 0px;
     padding-top: 80px;
-
 }
 
 /* Style text in top of page */
@@ -30,13 +22,15 @@ div.dark-region p {
 }
 /* Header/Blog Title */
 .dark-region {
-    position: static;
     display: block;
     background-repeat: no-repeat;
     text-align:center;
     color: white;
-    background-color: rgb(40, 40, 40);
     height: 90vh;
+    background-image: url("output-onlinepngtools.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #myContainer{
