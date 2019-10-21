@@ -15,7 +15,7 @@ These are our color swatches:
 - #ad4b09: dark orange
 - #482478: dark purple/aubergine
 - #ababab: silver
-- #5181da: light blue
+- #6956a0: light purple
 - #0a2666: dark blue
 
 Iconography
@@ -28,7 +28,7 @@ We will be using Poppins from Google Fonts.
 
 Links
 =====
-Links will not be underlined and should change color when a user hovers over them. Links will become light blue at hover.
+Links will not be underlined and should change color and become white when a user hovers over them. Links will become silver at hover. Current link will be highlighted in light purple.
 
 Buttons
 =======

@@ -6,7 +6,7 @@ body {
 
 /* Style title of page */
 div.dark-region h1 {
-    font-size:110px;
+    font-size:8vw;
     line-height:20px;
     font-weight:bold;
     margin: 0px;
@@ -111,13 +111,13 @@ div.dark-region p {
 
 /* Change navigation link color at mouse hover*/
 .topnav a:hover {
-    background-color: rgb(255, 255, 255);
+    background-color: #ababab;
     color:black;
 }
 
 /* Current navigation link*/
 .topnav a.current {
-    background-color:#5181da);
+    background-color:#6956a0;
 }
 
 /*Style the bottom navigation bar*/
@@ -150,6 +150,6 @@ div.dark-region p {
 
 /* Change navigation link color at mouse hover*/
 .botnav a:hover {
-    background-color: white;
+    background-color: #ababab;
     color:black;
 }
