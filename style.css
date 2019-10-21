@@ -1,41 +1,51 @@
 /* Remove margin from body*/
 body {
     margin:0;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Maven Pro', sans-serif;
 }
 
+
 /* Style title of page */
-div.header h1 {
+div.dark-region h1 {
     font-size:100px;
     line-height:20px;
     font-weight:bold;
+    margin: 0px;
+    padding-top: 80px;
 }
 
 /* Style text in top of page */
-div.header p {
+div.dark-region p {
     font-size:20px;
     line-height:20px;
+    padding-top: 30px;
 }
 /* Header/Blog Title */
-.header {
-    background: rgb(92, 92, 92);
-    text-align:left;
+.dark-region {
+    display: block;
+    background-repeat: no-repeat;
+    text-align:center;
     color: white;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 70px;
+    height: 90vh;
+    background-image: url("output-onlinepngtools.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+#myContainer{
+ background-color: rgb(40, 40, 40);
+}
+
 
 /*Style the top navigation bar*/
 .topnav {
     overflow:hidden;
-    background-color:rgb(58, 58, 58);
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    width: 100%;
-    /* can include shadow: box-shadow: 0px 5px 5px grey; */
-    
+    font-size: 20px;
+    background-color:rgb(40, 40, 40);
 }
 
 /* Style the top navigation links */
@@ -45,12 +55,13 @@ div.header p {
     color:white;
     text-align:center;
     padding:14px 16px;
+
     text-decoration: none;
 }
 
 /* Change navigation link color at mouse hover*/
 .topnav a:hover {
-    background-color:white;
+    background-color: rgb(255, 255, 255);
     color:black;
 }
 
@@ -62,8 +73,11 @@ div.header p {
 /*Style the bottom navigation bar*/
 .botnav {
     overflow:hidden;
-    background-color:rgb(58, 58, 58);
+    background-color:rgb(40, 40, 40);
+    ;
     width: 100%;
+    font-size: 20px;
+    bottom: 0;
 }
 
 /* Style the bottom navigation links */
@@ -78,7 +92,7 @@ div.header p {
 
 /* Style all font awesome icons */
 .fa {
-    font-size:20px;
+    font-size:22px;
     width: 50px;
     text-align: center;
     text-decoration: none;
@@ -86,6 +100,6 @@ div.header p {
 
 /* Change navigation link color at mouse hover*/
 .botnav a:hover {
-    background-color:white;
+    background-color: white;
     color:black;
 }
