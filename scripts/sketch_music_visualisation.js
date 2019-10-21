@@ -60,9 +60,9 @@ function myLoop () {
         // noiseDetail(8, 0.65)
         let n = noise(xoff, yoff, time);
         // n = 0.9;
-        pixels[index + 0] = r * (n+0.5);
-        pixels[index + 1] = g * (n+0.5);
-        pixels[index + 2] = b * (n+0.5);
+        pixels[index + 0] = r * (n+0.1);
+        pixels[index + 1] = g * (n+0.1);
+        pixels[index + 2] = b * (n+0.1);
         xoff += inc;
       }
     	yoff += inc;
