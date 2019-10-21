@@ -34,7 +34,7 @@ div.dark-region p {
 
 #myContainer{
  background-color: rgb(40, 40, 40);
- position: absolute;
+ filter: blur(0.5px);
 }
 
 .logo {
@@ -52,7 +52,7 @@ div.dark-region p {
 
 .together {
     font-weight: bold;
-    color:rgb(185, 172, 255)
+    color:rgb(168, 162, 243)
 }
 
 /* Style the top navigation links */
