@@ -5,7 +5,7 @@ var index = 0;
 var time = 0;
 var inc = 0.01;
 
-var wanted_width = window.innerWidth;
+var wanted_width = document.body.scrollWidth;
 var wanted_height = 150;
 
 var data_resolution = 2;
@@ -77,7 +77,7 @@ function myLoop () {
 }
 
 function resize(){
-	wanted_width = window.innerWidth;
+	wanted_width = document.body.clientWidth;
 	wanted_height = 150;
 	resizeCanvas(wanted_width, wanted_height, true)
 }
