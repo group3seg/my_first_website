@@ -9,6 +9,10 @@ div.header h1 {
     font-size:100px;
     line-height:20px;
     font-weight:bold;
+    height: 50vh;
+    margin: 0px;
+    padding-top: 80px;
+
 }
 
 /* Style text in top of page */
@@ -24,7 +28,11 @@ div.header p {
 }
 
 .top {
+<<<<<<< HEAD
     background-color:rgb(58, 58, 58);
+=======
+    background-color: rgb(40, 40, 40);
+>>>>>>> da56b1d1c9c9c719c5651fb02d3829b01b5a7d6f
 }
 
 /*Style the top navigation bar*/
@@ -33,8 +41,13 @@ div.header p {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+<<<<<<< HEAD
     width: 100%;
     font-size: 20px;
+=======
+    font-size: 20px;
+    background-color:rgb(58, 58, 58);
+>>>>>>> da56b1d1c9c9c719c5651fb02d3829b01b5a7d6f
 }
 
 /* Style the top navigation links */
@@ -44,12 +57,13 @@ div.header p {
     color:white;
     text-align:center;
     padding:14px 16px;
+
     text-decoration: none;
 }
 
 /* Change navigation link color at mouse hover*/
 .topnav a:hover {
-    background-color:white;
+    background-color: rgb(150, 150, 150);
     color:black;
 }
 
@@ -86,6 +100,6 @@ div.header p {
 
 /* Change navigation link color at mouse hover*/
 .botnav a:hover {
-    background-color:white;
+    background-color: white;
     color:black;
 }
