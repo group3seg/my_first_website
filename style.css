@@ -16,23 +16,35 @@ div.header h1 {
 }
 
 /* Style text in top of page */
-div.header p {
-    font-size:20px;
+div.dark-region h1 {
+    font-size:100px;
     line-height:20px;
+    font-weight:bold;
+    margin:0px;
+    padding-top: 60px;
 }
 /* Header/Blog Title */
-.header {
-    background-repeat: no-repeat;
-    text-align:center;
+.dark-region{
+    background-color: rgb(0,0,0);/*Fallback color*/
+    background-color: rgba(0,0,0,0.4);
     color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+    z-index: 2;
+    width: 40%;
+    padding: 20px;
+    text-align: center;
+}
+{
+    box-sizing: border-box;
 }
 
 .top {
-<<<<<<< HEAD
-    background-color:rgb(58, 58, 58);
-=======
     background-color: rgb(40, 40, 40);
->>>>>>> da56b1d1c9c9c719c5651fb02d3829b01b5a7d6f
 }
 
 /*Style the top navigation bar*/
