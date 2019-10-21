@@ -1,0 +1,35 @@
+Overall Look and Feel of Unison
+===============================
+The website will have a minimalist and clean look. It will give off a modern atmosphere. We will avoid 3D buttons and anything that is too dynamic and distracting. We want our website to look simple, basic and for the user to navigate it with ease. We will not clutter it. 
+
+The website should give off a vibe of calm confidence. The theme will be dark. We will mix black, white, and dark shades or purple and red to remind the user of technology and lights during a music concert.
+
+
+Colours
+========
+For Unison, we want to represent diversity and the lights that appear during a music festival. The main colors will be black, orange, purple, and blue.
+
+These are our color swatches:
+
+- #282828: dark grey/black
+- #ad4b09: dark orange
+- #482478: dark purple/aubergine
+- #ababab: silver
+- #5181da: light blue
+- #0a2666: dark blue
+
+Iconography
+===========
+Our icons will be simple, but large. They will be white and the most important ones will be contained in a white box.
+
+Typography
+==========
+We will be using Poppins from Google Fonts.
+
+Links
+=====
+Links will not be underlined and should change color when a user hovers over them. Links will become light blue at hover.
+
+Buttons
+=======
+Buttons will be flat and static.

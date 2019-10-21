@@ -1,12 +1,12 @@
 /* Remove margin from body*/
 body {
     margin:0;
-    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Style title of page */
 div.dark-region h1 {
-    font-size:100px;
+    font-size:110px;
     line-height:20px;
     font-weight:bold;
     margin: 0px;
@@ -79,7 +79,6 @@ div.dark-region p {
  background-color: rgb(40, 40, 40);
  filter: blur(0.1px);
  z-index: 2;
-
 }
 
 .logo {
@@ -97,12 +96,12 @@ div.dark-region p {
 
 .together {
     font-weight: bold;
-    color:rgb(168, 162, 243)
+    color:#ad4b09;
 }
 
 /* Style the top navigation links */
 .topnav a {
-    float:left;
+    float:right;
     display:block;
     color:white;
     text-align:center;
@@ -118,7 +117,7 @@ div.dark-region p {
 
 /* Current navigation link*/
 .topnav a.current {
-    background-color:rgb(105, 157, 253);
+    background-color:#5181da);
 }
 
 /*Style the bottom navigation bar*/
