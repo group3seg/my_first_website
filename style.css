@@ -1,7 +1,91 @@
+/* Remove margin from body*/
 body {
-    background-color: blue;
-};
+    margin:0;
+    font-family: 'Raleway', sans-serif;
+}
 
-h1 {
+/* Style title of page */
+div.header h1 {
+    font-size:100px;
+    line-height:20px;
+    font-weight:bold;
+}
 
-};
+/* Style text in top of page */
+div.header p {
+    font-size:20px;
+    line-height:20px;
+}
+/* Header/Blog Title */
+.header {
+    background: rgb(92, 92, 92);
+    text-align:left;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 70px;
+}
+
+/*Style the top navigation bar*/
+.topnav {
+    overflow:hidden;
+    background-color:rgb(58, 58, 58);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    /* can include shadow: box-shadow: 0px 5px 5px grey; */
+    
+}
+
+/* Style the top navigation links */
+.topnav a {
+    float:left;
+    display:block;
+    color:white;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration: none;
+}
+
+/* Change navigation link color at mouse hover*/
+.topnav a:hover {
+    background-color:white;
+    color:black;
+}
+
+/* Current navigation link*/
+.topnav a.current {
+    background-color:rgb(105, 157, 253);
+}
+
+/*Style the bottom navigation bar*/
+.botnav {
+    overflow:hidden;
+    background-color:rgb(58, 58, 58);
+    width: 100%;
+}
+
+/* Style the bottom navigation links */
+.botnav a {
+    float:left;
+    display:block;
+    color:white;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration: none;
+}
+
+/* Style all font awesome icons */
+.fa {
+    font-size:20px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+/* Change navigation link color at mouse hover*/
+.botnav a:hover {
+    background-color:white;
+    color:black;
+}
