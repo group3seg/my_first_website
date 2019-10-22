@@ -46,17 +46,17 @@ div.dark-region p {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
     color: white;
-    font-weight: bold;
     border: 3px solid #f1f1f1;
     position: absolute;
     top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    width: 40%;
-    padding: 20px;
+    width: 30%;
+    padding: 2px;
     text-align: center;
 }
+
 
 .bg-image {
     /* Add the blur effect */
@@ -107,16 +107,19 @@ div.dark-region p {
     text-align:center;
     padding:14px 16px;
     text-decoration: none;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
 }
 
 /* Change navigation link color at mouse hover*/
 .topnav a:hover {
     background-color: #ababab;
     color:black;
+    cursor: pointer;
 }
 
 /* Current navigation link*/
-.topnav a.current {
+.current {
     background-color:#6956a0;
 }
 
@@ -138,6 +141,8 @@ div.dark-region p {
     text-align:center;
     padding:14px 16px;
     text-decoration: none;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
 }
 
 /* Style all font awesome icons */
@@ -152,4 +157,5 @@ div.dark-region p {
 .botnav a:hover {
     background-color: #ababab;
     color:black;
+    cursor: pointer;
 }
