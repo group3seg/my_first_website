@@ -6,7 +6,7 @@ body {
 
 /* Style title of page */
 div.dark-region h1 {
-    font-size:14px;
+    font-size:7vw;
     line-height:20px;
     font-weight:bold;
     margin: 0px;
@@ -64,7 +64,7 @@ div.dark-region p {
     background-repeat: no-repeat;
     text-align:center;
     color: white;
-    height: 90vh;
+    height: 80vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -127,7 +127,6 @@ div.dark-region p {
 .botnav {
     overflow:hidden;
     background-color:rgb(40, 40, 40);
-    ;
     width: 100%;
     font-size: 20px;
     bottom: 0;
@@ -147,7 +146,7 @@ div.dark-region p {
 
 /* Style all font awesome icons */
 .fa {
-    font-size:22px;
+    font-size:31px;
     width: 50px;
     text-align: center;
     text-decoration: none;
