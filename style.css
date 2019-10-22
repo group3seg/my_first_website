@@ -1,29 +1,37 @@
 /* Remove margin from body*/
 body {
     margin:0;
-    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Style title of page */
-div.header h1 {
-    font-size:100px;
+div.dark-region h1 {
+    font-size:8vw;
     line-height:20px;
     font-weight:bold;
-    height: 50vh;
     margin: 0px;
-    padding-top: 80px;
-
+    padding-top: 60px;
 }
 
 /* Style text in top of page */
+<<<<<<< HEAD
 div.dark-region h1 {
     font-size:100px;
     line-height:20px;
     font-weight:bold;
     margin:0px;
     padding-top: 60px;
+=======
+div.dark-region p {
+    font-size:20px;
+    line-height:20px;
+    padding-top: 30px;
+>>>>>>> 983c554e6eee96412820c286d0d3f832cd92afa6
 }
+
+
 /* Header/Blog Title */
+<<<<<<< HEAD
 .dark-region{
     background-color: rgb(0,0,0);/*Fallback color*/
     background-color: rgba(0,0,0,0.4);
@@ -41,55 +49,126 @@ div.dark-region h1 {
 }
 {
     box-sizing: border-box;
+=======
+.dark-region {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 40%;
+    padding: 20px;
+    text-align: center;
 }
 
-.top {
-    background-color: rgb(40, 40, 40);
+* {
+    box-sizing: border-box;
+  }  
+
+.dark-region-bottom {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 30%;
+    padding: 2px;
+    text-align: center;
 }
 
+
+.bg-image {
+    /* Add the blur effect */
+    display: block;
+    background-repeat: no-repeat;
+    text-align:center;
+    color: white;
+    height: 90vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+>>>>>>> 983c554e6eee96412820c286d0d3f832cd92afa6
+}
+
+#myContainer{
+ background-color: rgb(40, 40, 40);
+ filter: blur(0.1px);
+ z-index: 2;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    float:left;
+}
 /*Style the top navigation bar*/
 .topnav {
     overflow:hidden;
-    position: -webkit-sticky;
-    position: sticky;
     top: 0;
 <<<<<<< HEAD
     width: 100%;
     font-size: 20px;
 =======
     font-size: 20px;
+<<<<<<< HEAD
     background-color:rgb(58, 58, 58);
 >>>>>>> da56b1d1c9c9c719c5651fb02d3829b01b5a7d6f
+=======
+    background-color:rgb(40, 40, 40);
+}
+
+.together {
+    font-weight: bold;
+    color:#ad4b09;
+>>>>>>> 983c554e6eee96412820c286d0d3f832cd92afa6
 }
 
 /* Style the top navigation links */
 .topnav a {
-    float:left;
+    float:right;
     display:block;
     color:white;
     text-align:center;
     padding:14px 16px;
-
     text-decoration: none;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
 }
 
 /* Change navigation link color at mouse hover*/
 .topnav a:hover {
-    background-color: rgb(150, 150, 150);
+    background-color: #ababab;
     color:black;
+    cursor: pointer;
 }
 
 /* Current navigation link*/
-.topnav a.current {
-    background-color:rgb(105, 157, 253);
+.current {
+    background-color:#6956a0;
 }
 
 /*Style the bottom navigation bar*/
 .botnav {
     overflow:hidden;
-    background-color:rgb(58, 58, 58);
+    background-color:rgb(40, 40, 40);
+    ;
     width: 100%;
     font-size: 20px;
+    bottom: 0;
 }
 
 /* Style the bottom navigation links */
@@ -100,11 +179,13 @@ div.dark-region h1 {
     text-align:center;
     padding:14px 16px;
     text-decoration: none;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
 }
 
 /* Style all font awesome icons */
 .fa {
-    font-size:28px;
+    font-size:22px;
     width: 50px;
     text-align: center;
     text-decoration: none;
@@ -112,6 +193,7 @@ div.dark-region h1 {
 
 /* Change navigation link color at mouse hover*/
 .botnav a:hover {
-    background-color: white;
+    background-color: #ababab;
     color:black;
+    cursor: pointer;
 }
