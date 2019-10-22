@@ -15,6 +15,7 @@ div.dark-region h1 {
 
 /* Style text in top of page */
 <<<<<<< HEAD
+<<<<<<< HEAD
 div.dark-region h1 {
     font-size:100px;
     line-height:20px;
@@ -22,15 +23,21 @@ div.dark-region h1 {
     margin:0px;
     padding-top: 60px;
 =======
+=======
+>>>>>>> 983c554e6eee96412820c286d0d3f832cd92afa6
 div.dark-region p {
     font-size:20px;
     line-height:20px;
     padding-top: 30px;
+<<<<<<< HEAD
+>>>>>>> 983c554e6eee96412820c286d0d3f832cd92afa6
+=======
 >>>>>>> 983c554e6eee96412820c286d0d3f832cd92afa6
 }
 
 
 /* Header/Blog Title */
+<<<<<<< HEAD
 <<<<<<< HEAD
 .dark-region{
     background-color: rgb(0,0,0);/*Fallback color*/
@@ -50,6 +57,8 @@ div.dark-region p {
 {
     box-sizing: border-box;
 =======
+=======
+>>>>>>> 983c554e6eee96412820c286d0d3f832cd92afa6
 .dark-region {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
@@ -101,6 +110,9 @@ div.dark-region p {
     -moz-filter: blur(5px);
     -o-filter: blur(5px);
     -ms-filter: blur(5px);
+<<<<<<< HEAD
+>>>>>>> 983c554e6eee96412820c286d0d3f832cd92afa6
+=======
 >>>>>>> 983c554e6eee96412820c286d0d3f832cd92afa6
 }
 
@@ -122,18 +134,24 @@ div.dark-region p {
 <<<<<<< HEAD
     width: 100%;
     font-size: 20px;
+<<<<<<< HEAD
 =======
     font-size: 20px;
 <<<<<<< HEAD
     background-color:rgb(58, 58, 58);
 >>>>>>> da56b1d1c9c9c719c5651fb02d3829b01b5a7d6f
 =======
+=======
+>>>>>>> 983c554e6eee96412820c286d0d3f832cd92afa6
     background-color:rgb(40, 40, 40);
 }
 
 .together {
     font-weight: bold;
     color:#ad4b09;
+<<<<<<< HEAD
+>>>>>>> 983c554e6eee96412820c286d0d3f832cd92afa6
+=======
 >>>>>>> 983c554e6eee96412820c286d0d3f832cd92afa6
 }
 
