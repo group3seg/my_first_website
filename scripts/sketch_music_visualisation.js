@@ -8,7 +8,7 @@ var inc = 0.01;
 var wanted_width = document.body.scrollWidth;
 var wanted_height = 150;
 
-var data_resolution = 2;
+var data_resolution = 15;
 
 
 
@@ -30,46 +30,58 @@ function myLoop () {
     index++;
     
     // initialize things
-    background('rgba(58, 58, 58, 1)');
+    background("rgba(58, 58, 58, 1)");
     colorMode(HSB, 255, 255, 255);
   
 
     let yoff = 1;
     loadPixels();
 
-    for (let x_data = 0; x_data < data.length; x_data += data_resolution) {
-    	var min_bef = 0;
-    	var max_bef = data.length - 40;
-    	var min_aft = 0;
-    	var max_aft = wanted_width;
-    	var new_x = Math.round(map(x_data, min_bef, max_bef, min_aft, max_aft));
-    	// console.log(x);
-    	// var new_x = 5;
+    for (let new_x = 0; new_x < width; new_x += 1) {
+    	var is_bar = false;
+    	if (new_x % data_resolution == 0){
+    		is_bar = true;
+    		var min_bef = 0;
+	    	var max_bef = wanted_width;
+	    	var min_aft = 0;
+	    	var max_aft = data.length - 40;
+	    	var x_data = Math.round(map(new_x, min_bef, max_bef, min_aft, max_aft));
+	    	// console.log(x);
+	    	// var new_x = 5;
 
-      let xoff = 1;
-      let bar_height = map(Math.round(spectrum[x_data]), -50, 50, wanted_height, 0);
-      let col = color(map(new_x, 0, wanted_width, 0, 235), 255, 255);
-      let r = red(col);
-      let g = green(col);
-      let b = blue(col)
+	      var xoff = 1;
+	      var bar_height = map(Math.round(spectrum[x_data]), -50, 50, wanted_height, 0);
+	      var col = color(map(new_x, 0, wanted_width, 0, 235), 255, 255);
+	      var r = red(col);
+	      var g = green(col);
+	      var b = blue(col);
+    	}
+    	
 
 
-      for (let y = height; y > 0; y--){
+      for (let y = height; y >= 0; y--){
       	let index = (new_x + 7 + y * wanted_width) * 4;
       	// we their is color only if y > bar_height
       	// otherwise it is supposed to be alpha
-      	if (y > bar_height){
+      	if (is_bar == true){
+      		if (y > bar_height){
 	        // noiseDetail(8, 0.65)
 	        let n = noise(xoff, yoff, time);
 	        // n = 0.9;
 	        pixels[index + 0] = r * (n+0.1);
 	        pixels[index + 1] = g * (n+0.1);
 	        pixels[index + 2] = b * (n+0.1);
+	        // pixels[index + 3] = 100;
 	        xoff += inc;
+      		}
+      		else{
+      			pixels[index + 3] = 0;
+      		}
       	}
       	else{
       		pixels[index + 3] = 0;
       	}
+      	
         
       }
     	yoff += inc;
@@ -77,8 +89,8 @@ function myLoop () {
     time += 0.1;
     updatePixels();
 
-      // call the function again
-      myLoop();
+    // call the function again
+    myLoop();
 
    }, 50) // delay before executing the function
 }
