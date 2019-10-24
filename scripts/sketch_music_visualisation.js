@@ -8,7 +8,7 @@ var inc = 0.01;
 var wanted_width = document.body.scrollWidth;
 var wanted_height = 150;
 
-var data_resolution = 15;
+var data_resolution = 19;
 
 
 
@@ -30,7 +30,7 @@ function myLoop () {
     index++;
     
     // initialize things
-    background("rgba(58, 58, 58, 1)");
+    background("rgba(58, 58, 58, 0.01)");
     colorMode(HSB, 255, 255, 255);
   
 
@@ -68,10 +68,10 @@ function myLoop () {
 	        // noiseDetail(8, 0.65)
 	        let n = noise(xoff, yoff, time);
 	        // n = 0.9;
-	        pixels[index + 0] = r * (n+0.1);
-	        pixels[index + 1] = g * (n+0.1);
-	        pixels[index + 2] = b * (n+0.1);
-	        // pixels[index + 3] = 100;
+	        pixels[index + 0] = r;
+	        pixels[index + 1] = g;
+	        pixels[index + 2] = b;
+	        pixels[index + 3] = n*255;
 	        xoff += inc;
       		}
       		else{
@@ -100,4 +100,3 @@ function resize(){
 	wanted_height = 150;
 	resizeCanvas(wanted_width, wanted_height, true)
 }
-
