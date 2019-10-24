@@ -84,7 +84,7 @@ function myLoop () {
 	        pixels[index + 0] = r;
 	        pixels[index + 1] = g;
 	        pixels[index + 2] = b;
-	        pixels[index + 3] = alpha * n;
+	        pixels[index + 3] = alpha * (n+0.1);
       	}
       	else{
       		pixels[index + 3] = 0;
@@ -116,11 +116,13 @@ function Bar(max_h){
 	this.update_pixels = function(h){
 		for (let e = 0; e < this.max_h ; e++){
 			if (e > h){
-				this.arr[e] = 255;
+				this.arr[e] += 50;
+				if (this.arr[e] >255){this.arr[e] = 255}
 
 			}
 			else{
 				this.arr[e] -= 50;
+				if (this.arr[e] < 0 ){this.arr[e] = 0}
 			}
 		}
 	}
