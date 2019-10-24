@@ -22,15 +22,15 @@ function setup() {
 
 function myLoop () {
 	setTimeout(function () {
-   // Code is here
-
+    // Code is here
+    
     // get the spectrum
     if (index >= data.length){index = 0;} //reset the animation at the end
     var spectrum = data[index];
     index++;
     
     // initialize things
-    background('rgba(58, 58, 58, 0.1)');
+    background('rgba(58, 58, 58, 1)');
     colorMode(HSB, 255, 255, 255);
   
 
@@ -54,15 +54,23 @@ function myLoop () {
       let b = blue(col)
 
 
-      for (let y = height; y > bar_height; y--){
-        let index = (new_x + 7 + y * wanted_width) * 4;
-        // noiseDetail(8, 0.65)
-        let n = noise(xoff, yoff, time);
-        // n = 0.9;
-        pixels[index + 0] = r * (n+0.1);
-        pixels[index + 1] = g * (n+0.1);
-        pixels[index + 2] = b * (n+0.1);
-        xoff += inc;
+      for (let y = height; y > 0; y--){
+      	let index = (new_x + 7 + y * wanted_width) * 4;
+      	// we their is color only if y > bar_height
+      	// otherwise it is supposed to be alpha
+      	if (y > bar_height){
+	        // noiseDetail(8, 0.65)
+	        let n = noise(xoff, yoff, time);
+	        // n = 0.9;
+	        pixels[index + 0] = r * (n+0.1);
+	        pixels[index + 1] = g * (n+0.1);
+	        pixels[index + 2] = b * (n+0.1);
+	        xoff += inc;
+      	}
+      	else{
+      		pixels[index + 3] = 0;
+      	}
+        
       }
     	yoff += inc;
   	} 
