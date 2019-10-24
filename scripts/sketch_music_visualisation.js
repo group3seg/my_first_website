@@ -10,20 +10,25 @@ var wanted_height = 150;
 
 var data_resolution = 19;
 
+var bar_idx = 0;
+var bars = [];
 
 
 function setup() {
   let cnv = createCanvas(wanted_width, wanted_height);
   cnv.parent("myContainer");
+  
+
+  console.log(bars)
   myLoop();
 
-
 }
+
 
 function myLoop () {
 	setTimeout(function () {
     // Code is here
-    
+
     // get the spectrum
     if (index >= data.length){index = 0;} //reset the animation at the end
     var spectrum = data[index];
@@ -33,9 +38,11 @@ function myLoop () {
     background("rgba(58, 58, 58, 0.01)");
     colorMode(HSB, 255, 255, 255);
   
+    bar_idx = 0;
 
     let yoff = 1;
     loadPixels();
+
 
     for (let new_x = 0; new_x < width; new_x += 1) {
     	var is_bar = false;
@@ -51,6 +58,12 @@ function myLoop () {
 
 	      var xoff = 1;
 	      var bar_height = map(Math.round(spectrum[x_data]), -50, 50, wanted_height, 0);
+	      if (typeof bars[bar_idx] === 'undefined'){
+	      	bars[bar_idx] = new Bar(height);
+	      }
+	      else{
+	      	bars[bar_idx].update_pixels(bar_height);
+	      }
 	      var col = color(map(new_x, 0, wanted_width, 0, 235), 255, 255);
 	      var r = red(col);
 	      var g = green(col);
@@ -64,19 +77,29 @@ function myLoop () {
       	// we their is color only if y > bar_height
       	// otherwise it is supposed to be alpha
       	if (is_bar == true){
-      		if (y > bar_height){
-	        // noiseDetail(8, 0.65)
+    		  // noiseDetail(8, 0.65)
 	        let n = noise(xoff, yoff, time);
 	        // n = 0.9;
+	        let alpha = bars[bar_idx].get_pixel(y);
 	        pixels[index + 0] = r;
 	        pixels[index + 1] = g;
 	        pixels[index + 2] = b;
-	        pixels[index + 3] = n*255;
-	        xoff += inc;
-      		}
-      		else{
-      			pixels[index + 3] = 0;
-      		}
+	        pixels[index + 3] = alpha * n;
+	        
+
+      		// if (y > bar_height){
+		      //   // noiseDetail(8, 0.65)
+		      //   let n = noise(xoff, yoff, time);
+		      //   // n = 0.9;
+		      //   pixels[index + 0] = r;
+		      //   pixels[index + 1] = g;
+		      //   pixels[index + 2] = b;
+		      //   pixels[index + 3] = n*255;
+		      //   xoff += inc;
+      		// }
+      		// else{
+      		// 	pixels[index + 3] = 0;
+      		// }
       	}
       	else{
       		pixels[index + 3] = 0;
@@ -85,6 +108,7 @@ function myLoop () {
         
       }
     	yoff += inc;
+    	bar_idx += 1;
   	} 
     time += 0.1;
     updatePixels();
@@ -99,4 +123,23 @@ function resize(){
 	wanted_width = document.body.clientWidth;
 	wanted_height = 150;
 	resizeCanvas(wanted_width, wanted_height, true)
+}
+
+function Bar(max_h){
+	this.max_h = max_h;
+	this.arr = Array(max_h).fill(0);
+	this.update_pixels = function(h){
+		for (let e = 0; e < this.max_h ; e++){
+			if (e > h){
+				this.arr[e] = 255;
+
+			}
+			else{
+				this.arr[e] = 0;
+			}
+		}
+	}
+	this.get_pixel = function(y){
+		return this.arr[y];
+	}
 }
