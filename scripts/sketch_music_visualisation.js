@@ -85,21 +85,6 @@ function myLoop () {
 	        pixels[index + 1] = g;
 	        pixels[index + 2] = b;
 	        pixels[index + 3] = alpha * n;
-	        
-
-      		// if (y > bar_height){
-		      //   // noiseDetail(8, 0.65)
-		      //   let n = noise(xoff, yoff, time);
-		      //   // n = 0.9;
-		      //   pixels[index + 0] = r;
-		      //   pixels[index + 1] = g;
-		      //   pixels[index + 2] = b;
-		      //   pixels[index + 3] = n*255;
-		      //   xoff += inc;
-      		// }
-      		// else{
-      		// 	pixels[index + 3] = 0;
-      		// }
       	}
       	else{
       		pixels[index + 3] = 0;
@@ -135,7 +120,7 @@ function Bar(max_h){
 
 			}
 			else{
-				this.arr[e] = 0;
+				this.arr[e] -= 50;
 			}
 		}
 	}
