@@ -20,7 +20,7 @@ function setup() {
 
 }
 
-function myLoop () {           
+function myLoop () {
 	setTimeout(function () {
    // Code is here
 
@@ -47,16 +47,15 @@ function myLoop () {
     	// var new_x = 5;
 
       let xoff = 1;
-      let bar_height = map(Math.round(spectrum[x_data]), -150, 50, wanted_height, 0);
+      let bar_height = map(Math.round(spectrum[x_data]), -50, 50, wanted_height, 0);
       let col = color(map(new_x, 0, wanted_width, 0, 235), 255, 255);
       let r = red(col);
       let g = green(col);
       let b = blue(col)
 
 
-      for (let y = 0; y < bar_height; y++){
-        let inverted_y = height - y;
-        let index = (new_x + 7 + inverted_y * wanted_width) * 4;
+      for (let y = height; y > bar_height; y--){
+        let index = (new_x + 7 + y * wanted_width) * 4;
         // noiseDetail(8, 0.65)
         let n = noise(xoff, yoff, time);
         // n = 0.9;
