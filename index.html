@@ -7,7 +7,7 @@
 
     <!--Link to font-->
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-    
+
     <!--Link to CSS sheet-->
     <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -49,13 +49,22 @@
 
         <div class="dark-region">
             <h1>UNISON</h1>
-            <p>MOVE FORWARD <span class="together">TOGETHER</span>.</p>
+            <p>MOVE FORWARD 
+                    <span
+                    class="together"
+                    data-period="2000"
+                    data-rotate='[ "WITH MUSIC.", "TOGETHER."]'></span>
+            </p>
         </div>
+        <script src="./scripts/typewriter.js"></script>
 
-        <div class="dark-region-bottom">
-            <p>We Help Musicians <span class="together">Collaborate</span>.</p>
-            <p>Get Started Now.</p>
-        </div>
+
+        <a href="features.html">
+            <div class="dark-region-bottom">
+                <p>We Help Musicians <span class="together">Collaborate</span>.</p>
+                <p>Get Started Now.</p>
+            </div>
+        </a>
 
     </div>
 
@@ -68,7 +77,7 @@
         <a style="float: right" href="#">Terms and Conditions</a>
         <a style="float: right" href="#">Privacy</a>
         <a style="float: left" href="#">Copyright &copy; Unison 2019</a>
-    </div>
+    </div>    
     <script src="./scripts/data.js"></script>
     <script src="./scripts/p5.js"></script>
     <script src="./scripts/p5.dom.js"></script>
