@@ -110,7 +110,6 @@ div.dark-region p {
     text-decoration: none;
     -webkit-transition-duration: 0.4s; /* Safari */
 
-    background-image: linear-gradient(dodgerblue,dodgerblue);
     background-size: 0 5px, auto;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -118,7 +117,18 @@ div.dark-region p {
 
     
 }
-
+.title {
+    background-image: linear-gradient(rgb(255, 30, 30),rgb(255, 30, 30));
+}
+.features {
+    background-image: linear-gradient(rgb(38, 255, 30),rgb(38, 255, 30));
+}
+.pricing {
+    background-image: linear-gradient(dodgerblue,dodgerblue);
+}
+.team {
+    background-image: linear-gradient(rgb(173, 30, 255),rgb(173, 30, 255));
+}
 /* Change navigation link color at mouse hover*/
 .topnav a:hover {
     background-color: #ababab;
@@ -127,11 +137,6 @@ div.dark-region p {
     background-size: 100% 5px, auto;
 
 
-}
-
-/* Current navigation link*/
-.current {
-    background-color:#6956a0;
 }
 
 /*Style the bottom navigation bar*/
