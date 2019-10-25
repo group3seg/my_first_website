@@ -1,3 +1,5 @@
+// https://p5js.org/reference/#/p5.sound/userStartAudio
+
 
 var index = 0;
 var time = 0;
@@ -24,6 +26,10 @@ var avg = 0;
 function setup() {
   let cnv = createCanvas(wanted_width, wanted_height);
   cnv.parent("myContainer");
+
+  userStartAudio().then(function() {
+     console.log("audio started");
+   });
   
   console.log(bars)
   myLoop();
