@@ -97,7 +97,7 @@ div.dark-region p {
 
 .together {
     font-weight: bold;
-    color:#ad4b09;
+    color:rgb(255, 30, 30);
 }
 
 /* Style the top navigation links */
@@ -121,7 +121,7 @@ div.dark-region p {
     background-image: linear-gradient(rgb(255, 30, 30),rgb(255, 30, 30));
 }
 .features {
-    background-image: linear-gradient(rgb(38, 255, 30),rgb(38, 255, 30));
+    background-image: linear-gradient(rgb(30, 255, 30),rgb(30, 255, 30));
 }
 .pricing {
     background-image: linear-gradient(dodgerblue,dodgerblue);
@@ -159,7 +159,7 @@ div.dark-region p {
     text-decoration: none;
     -webkit-transition-duration: 0.4s; /* Safari */
 
-    background-image: linear-gradient(dodgerblue,dodgerblue);
+    background-image: linear-gradient(rgb(255, 30, 30),rgb(255, 30, 30));
     background-size: 0 5px, auto;
     background-repeat: no-repeat;
     background-position: center bottom;
