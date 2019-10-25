@@ -13,6 +13,9 @@ var data_resolution = 19;
 var bar_idx = 0;
 var bars = [];
 
+var real_audio = false;
+var micro = undefined;
+
 
 function setup() {
   let cnv = createCanvas(wanted_width, wanted_height);
@@ -128,5 +131,18 @@ function Bar(max_h){
 	}
 	this.get_pixel = function(y){
 		return this.arr[y];
+	}
+}
+
+function Micro(){
+	mic = new p5.AudioIn();
+  mic.start();
+  fft = new p5.FFT();
+  fft.setInput(mic);
+}
+
+function try_it(){
+	if (typeof micro == 'undefined'){
+		micro = new Micro();
 	}
 }
