@@ -140,15 +140,6 @@ function Bar(max_h){
 	}
 }
 
-// function Micro(){
-// 	this.mic = new p5.AudioIn();
-//   this.mic.start();
-//   this.fft = new p5.FFT();
-//   this.fft.setInput(mic);
-//   this.analyse = function () {
-//   	return this.fft.analyze()
-//   }
-// }
 
 function try_it(){
 	if (typeof micro === 'undefined'){
@@ -161,6 +152,7 @@ function try_it(){
 	}
 	else {
 		console.log("mic off")
+		mic.stop();
 		delete mic
 		delete micro;
 		micro = undefined;
