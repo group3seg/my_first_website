@@ -38,7 +38,7 @@ function myLoop () {
     	index++;
     }
     else {
-    	var spectrum = micro.analyse();
+    	var spectrum = micro.analyze();
     }
     
     
@@ -87,12 +87,15 @@ function myLoop () {
       	if (is_bar == true){
     		  // noiseDetail(8, 0.65)
 	        let n = noise(xoff, yoff, time);
+
 	        // n = 0.9;
 	        let alpha = bars[bar_idx].get_pixel(y);
 	        pixels[index + 0] = r;
 	        pixels[index + 1] = g;
 	        pixels[index + 2] = b;
 	        pixels[index + 3] = alpha * (n+0.1);
+
+	        xoff += inc;
       	}
       	else{
       		pixels[index + 3] = 0;
@@ -109,7 +112,7 @@ function myLoop () {
     // call the function again
     myLoop();
 
-   }, 50) // delay before executing the function
+   }, 10) // delay before executing the function
 }
 
 function resize(){
@@ -139,21 +142,28 @@ function Bar(max_h){
 	}
 }
 
-function Micro(){
-	this.mic = new p5.AudioIn();
-  this.mic.start();
-  this.fft = new p5.FFT();
-  this.fft.setInput(mic);
-  this.analyse = function () {
-  	return this.fft.analyze()
-  }
-}
+// function Micro(){
+// 	this.mic = new p5.AudioIn();
+//   this.mic.start();
+//   this.fft = new p5.FFT();
+//   this.fft.setInput(mic);
+//   this.analyse = function () {
+//   	return this.fft.analyze()
+//   }
+// }
 
 function try_it(){
-	if (typeof micro == 'undefined'){
-		micro = new Micro();
+	if (typeof micro === 'undefined'){
+		mic = new p5.AudioIn();
+	  mic.start();
+	  micro = new p5.FFT();
+	  micro.setInput(mic);
+	  console.log(micro.analyze());
+	  console.log("mic on")
 	}
 	else {
+		console.log("mic off")
+		delete mic
 		delete micro;
 		micro = undefined;
 	}
