@@ -13,7 +13,6 @@ var data_resolution = 19;
 var bar_idx = 0;
 var bars = [];
 
-var real_audio = false;
 var micro = undefined;
 
 
@@ -33,9 +32,15 @@ function myLoop () {
     // Code is here
 
     // get the spectrum
-    if (index >= data.length){index = 0;} //reset the animation at the end
-    var spectrum = data[index];
-    index++;
+    if (typeof micro === 'undefined'){
+    	if (index >= data.length){index = 0;} //reset the animation at the end
+    	var spectrum = data[index];
+    	index++;
+    }
+    else {
+    	var spectrum = micro.analyse();
+    }
+    
     
     // initialize things
     background("rgba(58, 58, 58, 0.01)");
@@ -135,14 +140,21 @@ function Bar(max_h){
 }
 
 function Micro(){
-	mic = new p5.AudioIn();
-  mic.start();
-  fft = new p5.FFT();
-  fft.setInput(mic);
+	this.mic = new p5.AudioIn();
+  this.mic.start();
+  this.fft = new p5.FFT();
+  this.fft.setInput(mic);
+  this.analyse = function () {
+  	return this.fft.analyze()
+  }
 }
 
 function try_it(){
 	if (typeof micro == 'undefined'){
 		micro = new Micro();
+	}
+	else {
+		delete micro;
+		micro = undefined;
 	}
 }
