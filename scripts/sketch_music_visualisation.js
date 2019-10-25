@@ -14,11 +14,21 @@ var bars = [];
 var micro = undefined;
 
 
+let slider;
+
+var minimum = -50;
+var maximum = 50;
+var avg = 0;
+
+
 function setup() {
   let cnv = createCanvas(wanted_width, wanted_height);
   cnv.parent("myContainer");
-  
 
+  slider = createSlider(0, 500, 50);
+  slider.position(10, 10);
+  slider.style('width', '80px');
+  
   console.log(bars)
   myLoop();
 
@@ -49,6 +59,17 @@ function myLoop () {
     let yoff = 1;
     loadPixels();
 
+    var temp_min = Math.min.apply(Math, spectrum);
+	  var temp_max = Math.max.apply(Math, spectrum);
+    
+    maximum = maximum - ((maximum - temp_max)/5);
+    minimum = minimum - ((minimum - temp_min)/5);
+    if (slider.value() >= 200){
+		  console.log(temp_min);
+		  console.log(temp_max);
+	  }
+
+
 
     for (let new_x = 0; new_x < width; new_x += 1) {
     	var is_bar = false;
@@ -63,7 +84,13 @@ function myLoop () {
 	    	// var new_x = 5;
 
 	      var xoff = 1;
-	      var bar_height = map(Math.round(spectrum[x_data]), -50, 50, wanted_height, 0);
+
+	      
+	      // else{console.log("s")}
+	      
+	      
+
+	      var bar_height = map(Math.round(spectrum[x_data]), minimum, maximum, wanted_height, 0);
 	      if (typeof bars[bar_idx] === 'undefined'){
 	      	bars[bar_idx] = new Bar(height);
 	      }
