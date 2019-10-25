@@ -24,10 +24,6 @@ var avg = 0;
 function setup() {
   let cnv = createCanvas(wanted_width, wanted_height);
   cnv.parent("myContainer");
-
-  slider = createSlider(0, 500, 50);
-  slider.position(10, 10);
-  slider.style('width', '80px');
   
   console.log(bars)
   myLoop();
@@ -46,7 +42,7 @@ function myLoop () {
     	index++;
     }
     else {
-    	var spectrum = micro.analyze();
+    	var spectrum = micro.analyze().map(function(x) { return x * 100; });
     }
     
     
@@ -64,11 +60,6 @@ function myLoop () {
     
     maximum = maximum - ((maximum - temp_max)/5);
     minimum = minimum - ((minimum - temp_min)/5);
-    if (slider.value() >= 200){
-		  console.log(temp_min);
-		  console.log(temp_max);
-	  }
-
 
 
     for (let new_x = 0; new_x < width; new_x += 1) {
