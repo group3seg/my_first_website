@@ -2,6 +2,7 @@
 body {
     margin:0;
     font-family: 'Poppins', sans-serif;
+
 }
 
 /* Style title of page */
@@ -37,6 +38,8 @@ div.dark-region p {
     padding: 20px;
     text-align: center;
     letter-spacing: 5px;
+    text-shadow: 2px 2px black;
+    box-shadow: 2px 2px black;
 
 }
 
@@ -63,6 +66,8 @@ div.dark-region p {
 
     font-weight: bold;
     letter-spacing: 5px;
+    text-shadow: 2px 2px black;
+    box-shadow: 2px 2px black;
 
     }
 
