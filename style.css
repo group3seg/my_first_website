@@ -29,7 +29,7 @@ div.dark-region p {
     font-weight: bold;
     border: 3px solid #f1f1f1;
     position: absolute;
-    top: 60%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -50,7 +50,7 @@ div.dark-region p {
     border: 3px solid #f1f1f1;
     position: absolute;
     
-    top: 80%;
+    top: 75%;
     left: 35%;
     /*transform: translate(-50%, -50%);*/
     z-index: 2;
@@ -75,11 +75,12 @@ div.dark-region p {
     background-repeat: no-repeat;
     text-align:center;
     color: white;
-    height: 80vh;
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1;
+    box-shadow: 10px 0px 18px black;
 }
 
 #myContainer{
