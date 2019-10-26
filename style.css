@@ -36,6 +36,7 @@ div.dark-region p {
     width: 40%;
     padding: 20px;
     text-align: center;
+    letter-spacing: 5px;
 }
 
 * {
@@ -58,7 +59,10 @@ div.dark-region p {
 
     text-align: center;
     transition: all .2s ease-in-out;
-}
+
+    font-weight: bold;
+    letter-spacing: 5px;
+    }
 
 .dark-region-bottom:hover {
     transform: scale(1.1);
@@ -86,12 +90,13 @@ div.dark-region p {
     width: 40px;
     height: 40px;
     float:left;
+    vertical-align: middle;
 }
 /*Style the top navigation bar*/
 .topnav {
     overflow:hidden;
     top: 0;
-    font-size: 20px;
+    font-size: 25px;
     background-color:rgb(40, 40, 40);
 }
 
@@ -121,7 +126,7 @@ div.dark-region p {
     background-image: linear-gradient(rgb(255, 30, 30),rgb(255, 30, 30));
 }
 .features {
-    background-image: linear-gradient(rgb(30, 255, 30),rgb(30, 255, 30));
+    background-image: linear-gradient(rgb(30, 255, 200),rgb(30, 255, 200));
 }
 .pricing {
     background-image: linear-gradient(dodgerblue,dodgerblue);
@@ -155,7 +160,6 @@ div.dark-region p {
     color:white;
     text-align:center;
     padding:14px 16px;
-    font-size: 15px;
     text-decoration: none;
     -webkit-transition-duration: 0.4s; /* Safari */
 
@@ -164,14 +168,13 @@ div.dark-region p {
     background-repeat: no-repeat;
     background-position: center bottom;
     transition: all .2s ease-out;
+
+    font-size:15px;
 }
 
 /* Style all font awesome icons */
-.fa {
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-  }
+
+
 
 /* Change navigation link color at mouse hover*/
 .botnav a:hover {
