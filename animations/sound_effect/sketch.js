@@ -80,3 +80,12 @@ function resize(){
 	wanted_height = 150;
 	resizeCanvas(wanted_width, wanted_height, true)
 }
+
+class Bar {
+  constructor() {
+    pixels = [];
+  }
+
+  
+
+}
