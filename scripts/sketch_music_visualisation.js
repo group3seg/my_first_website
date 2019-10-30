@@ -77,13 +77,11 @@ function myLoop () {
 	    	var min_aft = 0;
 	    	var max_aft = data.length - 40;
 	    	var x_data = Math.round(map(new_x, min_bef, max_bef, min_aft, max_aft));
-	    	// console.log(x);
-	    	// var new_x = 5;
+
 
 	      var xoff = 1;
 
 	      
-	      // else{console.log("s")}
 	      
 	      
 

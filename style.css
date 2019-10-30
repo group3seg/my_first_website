@@ -104,8 +104,6 @@ div.dark-region p {
 .logo {
     width: 40px;
     height: 40px;
-    float:left;
-    vertical-align: middle;
 }
 /*Style the top navigation bar*/
 .topnav {
@@ -113,6 +111,17 @@ div.dark-region p {
     top: 0;
     font-size: 25px;
     background-color:rgb(40, 40, 40);
+    height: 65.5px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
 }
 
 .together {
@@ -121,11 +130,24 @@ div.dark-region p {
 }
 
 /* Style the top navigation links */
-.topnav a {
+.topnav a:not(#text-logo){
     float:right;
     display:block;
     color:white;
     text-align:center;
+    padding:14px 16px;
+    text-decoration: none;
+    -webkit-transition-duration: 0.4s; /* Safari */
+
+    background-size: 0 5px, auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: all .2s ease-out;
+
+    
+}
+#text-logo {
+    color:white;
     padding:14px 16px;
     text-decoration: none;
     -webkit-transition-duration: 0.4s; /* Safari */
