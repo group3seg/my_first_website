@@ -99,6 +99,7 @@ div.dark-region p {
 
 #myContainer{
  background-color: rgb(40, 40, 40);
+ margin-top: 65.5px;
 }
 
 .logo {
@@ -117,11 +118,15 @@ div.dark-region p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 99;
 }
 .logo-container {
     display: flex;
     align-items: center;
     padding-left: 15px;
+    background-image: linear-gradient(rgb(255, 0, 0),rgb(255, 0, 0));
+
+
 }
 
 .together {
@@ -130,11 +135,10 @@ div.dark-region p {
 }
 
 /* Style the top navigation links */
-.topnav a:not(#text-logo){
+.underlined-element{
     float:right;
     display:block;
     color:white;
-    text-align:center;
     padding:14px 16px;
     text-decoration: none;
     -webkit-transition-duration: 0.4s; /* Safari */
@@ -146,22 +150,12 @@ div.dark-region p {
 
     
 }
-#text-logo {
-    color:white;
-    padding:14px 16px;
+.text-logo {
+    padding-left: 5px;
+    padding-right: 5px;
     text-decoration: none;
-    -webkit-transition-duration: 0.4s; /* Safari */
-
-    background-size: 0 5px, auto;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    transition: all .2s ease-out;
-
-    
 }
-.title {
-    background-image: linear-gradient(rgb(255, 30, 30),rgb(255, 30, 30));
-}
+
 .features {
     background-image: linear-gradient(rgb(30, 255, 200),rgb(30, 255, 200));
 }
@@ -172,7 +166,7 @@ div.dark-region p {
     background-image: linear-gradient(rgb(173, 30, 255),rgb(173, 30, 255));
 }
 /* Change navigation link color at mouse hover*/
-.topnav a:hover {
+.underlined-element:hover {
     background-color: #ababab;
     color:black;
     cursor: pointer;
@@ -180,6 +174,7 @@ div.dark-region p {
 
 
 }
+
 
 /*Style the bottom navigation bar*/
 .botnav {
