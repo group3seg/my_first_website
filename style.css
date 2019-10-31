@@ -123,6 +123,7 @@ div.dark-region p {
 .logo-container {
     align-items: center;
     padding-left: 0px !important;
+    margin-top: 7px !important;
     background-image: linear-gradient(rgb(255, 0, 0),rgb(255, 0, 0));
 
 
