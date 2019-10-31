@@ -103,8 +103,8 @@ div.dark-region p {
 }
 
 .logo {
-    width: 40px;
-    height: 40px;
+    width: 90px;
+    height: 90px;
 }
 /*Style the top navigation bar*/
 .topnav {
@@ -121,9 +121,8 @@ div.dark-region p {
     z-index: 99;
 }
 .logo-container {
-    display: flex;
     align-items: center;
-    padding-left: 15px;
+    padding-left: 0px !important;
     background-image: linear-gradient(rgb(255, 0, 0),rgb(255, 0, 0));
 
 
@@ -137,7 +136,7 @@ div.dark-region p {
 /* Style the top navigation links */
 .underlined-element{
     float:right;
-    display:block;
+    display:flex;
     color:white;
     padding:14px 16px;
     text-decoration: none;
@@ -151,7 +150,7 @@ div.dark-region p {
     
 }
 .text-logo {
-    padding-left: 5px;
+    padding-left: 0px;
     padding-right: 5px;
     text-decoration: none;
 }
