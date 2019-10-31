@@ -5,8 +5,9 @@ var index = 0;
 var time = 0;
 var inc = 0.01;
 
-var wanted_width = document.body.scrollWidth;
+
 var wanted_height = 150;
+var wanted_width = document.body.clientWidth;
 
 var data_resolution = 19;
 
@@ -26,6 +27,7 @@ var avg = 0;
 function setup() {
   let cnv = createCanvas(wanted_width, wanted_height);
   cnv.parent("myContainer");
+  pixelDensity(1);
 
   userStartAudio().then(function() {
      console.log("audio started");
@@ -40,7 +42,6 @@ function setup() {
 function myLoop () {
 	setTimeout(function () {
     // Code is here
-
     // get the spectrum
     if (typeof micro === 'undefined'){
     	if (index >= data.length){index = 0;} //reset the animation at the end
