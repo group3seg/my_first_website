@@ -23,17 +23,34 @@ var minimum = -50;
 var maximum = 50;
 var avg = 0;
 
+function getOS() {
+  var userAgent = window.navigator.userAgent,
+      platform = window.navigator.platform,
+      macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+      windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+      iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+      os = null;
+
+  if (macosPlatforms.indexOf(platform) !== -1) {
+    os = 'Mac OS';
+  } else if (iosPlatforms.indexOf(platform) !== -1) {
+    os = 'iOS';
+  } else if (windowsPlatforms.indexOf(platform) !== -1) {
+    os = 'Windows';
+  } else if (/Android/.test(userAgent)) {
+    os = 'Android';
+  } else if (!os && /Linux/.test(platform)) {
+    os = 'Linux';
+  }
+
+  return os;
+}
 
 function setup() {
   let cnv = createCanvas(wanted_width, wanted_height);
   cnv.parent("myContainer");
   pixelDensity(1);
-
-  userStartAudio().then(function() {
-     console.log("audio started");
-   });
   
-  console.log(bars)
   myLoop();
 
 }
@@ -166,15 +183,17 @@ function Bar(max_h){
 
 function try_it(){
 	if (typeof micro === 'undefined'){
+		userStartAudio().then(function() {
+     		console.log("audio started");
+   		});
 		mic = new p5.AudioIn();
-	  mic.start();
-	  micro = new p5.FFT();
-	  micro.setInput(mic);
-	  console.log(micro.analyze());
-	  console.log("mic on")
+		mic.start();
+	  	micro = new p5.FFT();
+	  	micro.setInput(mic);
+	  	
 	}
 	else {
-		console.log("mic off")
+     	console.log("audio stopped");
 		mic.stop();
 		delete mic
 		delete micro;
