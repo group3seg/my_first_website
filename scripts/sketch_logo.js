@@ -13,14 +13,23 @@ const s1 = ( sketch ) => {
 
   sketch.draw = () => {
     sketch.background("rgba(255, 255, 255, 0)");
-
+    let animate;
+    if (sketch.mouseX <= 197.25 && sketch.mouseY <= 83){
+      animate = true;
+    }
+    else {
+      animate = false;
+    }
     let img1 = sketch.createImage(w, h);
     img1.loadPixels();
     for (let i = 0; i < img1.width; i++) {
       for (let j = 0; j < img1.height; j++) {
         if (((i-(w/2))**2 + (j-(h/2))**2)**0.5 < w/4.2){
-          let noiseVal = sketch.noise((count+i)*noiseScale) * 255;
-          img1.set(i, j, sketch.color((noiseVal)*0.65, (noiseVal)*0.3, 50));
+          if (animate){
+            let noiseVal = sketch.noise((count+i)*noiseScale) * 255;
+            img1.set(i, j, sketch.color((noiseVal)*0.65, (noiseVal)*0.3, 50));
+          }
+          
         }
       }
     }
