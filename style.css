@@ -107,8 +107,9 @@ div.dark-region p {
     z-index: 0;
 }
 .logo {
-    width: 90px;
-    height: 90px;
+    width: 65.5px;
+    height: 65.5px;
+    margin-left: 10px;
     position: fixed;
     z-index: 5;
 }

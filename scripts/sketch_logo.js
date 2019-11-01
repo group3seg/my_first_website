@@ -2,8 +2,8 @@ const s1 = ( sketch ) => {
   let noiseScale=0.1;
   let xoff = 0;
   let count = 0;
-  let w = 90;
-  let h = 90;
+  let w = 65;
+  let h = 65;
 
   sketch.setup = () => {
     sketch.createCanvas(w, h);
@@ -24,7 +24,7 @@ const s1 = ( sketch ) => {
     img1.loadPixels();
     for (let i = 0; i < img1.width; i++) {
       for (let j = 0; j < img1.height; j++) {
-        if (((i-(w/2))**2 + (j-(h/2))**2)**0.5 < w/4.2){
+        if (((i-(45))**2 + (j-(35))**2)**0.5 < w/3){
           if (animate){
             let noiseVal = sketch.noise((count+i)*noiseScale) * 255;
             img1.set(i, j, sketch.color((noiseVal)*0.65, (noiseVal)*0.3, 50));
