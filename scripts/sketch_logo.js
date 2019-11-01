@@ -4,12 +4,11 @@ const s1 = ( sketch ) => {
   let count = 0;
   let w = 90;
   let h = 90;
-  let pxDensity = 5;
 
   sketch.setup = () => {
     sketch.createCanvas(w, h);
     // img = sketch.loadImage('logo_transparent.png'); // Load the image
-    sketch.pixelDensity(5);
+    sketch.pixelDensity(1);
   }
 
   sketch.draw = () => {

@@ -102,10 +102,15 @@ div.dark-region p {
  margin-top: 65.5px;
 }
 
+#div_sketch_logo {
+    position: fixed;
+    z-index: 0;
+}
 .logo {
     width: 90px;
     height: 90px;
     position: fixed;
+    z-index: 5;
 }
 /*Style the top navigation bar*/
 .topnav {
@@ -129,7 +134,9 @@ div.dark-region p {
 
 
 }
-
+#topnav-unison-text {
+    margin-left: 90px;
+}
 
 .together {
     font-weight: bold;
