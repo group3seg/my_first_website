@@ -1,17 +1,17 @@
 /* Remove margin from body*/
 body {
     margin:0;
-    font-family: 'Maven Pro', sans-serif;
-}
+    font-family: 'Poppins', sans-serif;
 
+}
 
 /* Style title of page */
 div.dark-region h1 {
-    font-size:100px;
+    font-size:7vw;
     line-height:20px;
     font-weight:bold;
     margin: 0px;
-    padding-top: 80px;
+    padding-top: 60px;
 }
 
 /* Style text in top of page */
@@ -20,61 +20,176 @@ div.dark-region p {
     line-height:20px;
     padding-top: 30px;
 }
+
+
 /* Header/Blog Title */
 .dark-region {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 7px;
+    text-shadow: 2px 2px black;
+    box-shadow: 2px 2px black;
+    box-shadow: inset 0px 0px 15px black;
+    transition: all .2s ease-in-out;
+}
+
+.dark-region:hover {
+    box-shadow: inset 0px 0px 0px black;
+
+}
+
+* {
+    box-sizing: border-box;
+  }  
+
+.dark-region-bottom {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    
+    top: 80%;
+    left: 40%;
+    /*transform: translate(-50%, -50%);*/
+    z-index: 2;
+    width: 18%;
+    padding: 2px;
+
+    text-align: center;
+    transition: all .2s ease-in-out;
+
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px black;
+    box-shadow: 2px 2px black;
+
+    }
+
+.dark-region-bottom:hover {
+    transform: scale(1.1);
+}
+
+
+.bg-image {
+    /* Add the blur effect */
     display: block;
     background-repeat: no-repeat;
     text-align:center;
     color: white;
-    height: 90vh;
-    background-image: url("output-onlinepngtools.png");
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 1;
+    box-shadow: inset 0 0 50px #000000;
+    background-attachment: fixed;
 }
 
 #myContainer{
  background-color: rgb(40, 40, 40);
+ margin-top: 65.5px;
 }
 
-
+#div_sketch_logo {
+    position: fixed;
+    z-index: 0;
+}
+.logo {
+    width: 65.5px;
+    height: 65.5px;
+    margin-left: 10px;
+    position: fixed;
+    z-index: 5;
+}
 /*Style the top navigation bar*/
 .topnav {
     overflow:hidden;
-    position: -webkit-sticky;
-    position: sticky;
     top: 0;
-    font-size: 20px;
+    font-size: 25px;
     background-color:rgb(40, 40, 40);
+    height: 65.5px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.logo-container {
+    align-items: center;
+    padding-left: 0px !important;
+    margin-top: 0px;
+    background-image: linear-gradient(rgb(255, 0, 0),rgb(255, 0, 0));
+
+
+}
+#topnav-unison-text {
+    margin-left: 90px;
+}
+
+.together {
+    font-weight: bold;
+    color:rgb(255, 30, 30);
 }
 
 /* Style the top navigation links */
-.topnav a {
-    float:left;
-    display:block;
+.underlined-element{
+    float:right;
+    display:flex;
     color:white;
-    text-align:center;
     padding:14px 16px;
+    text-decoration: none;
+    -webkit-transition-duration: 0.4s; /* Safari */
 
+    background-size: 0 5px, auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: all .2s ease-out;
+
+    
+}
+.text-logo {
+    padding-left: 0px;
+    padding-right: 5px;
     text-decoration: none;
 }
 
+.features {
+    background-image: linear-gradient(rgb(30, 255, 200),rgb(30, 255, 200));
+}
+.pricing {
+    background-image: linear-gradient(dodgerblue,dodgerblue);
+}
+.team {
+    background-image: linear-gradient(rgb(173, 30, 255),rgb(173, 30, 255));
+}
 /* Change navigation link color at mouse hover*/
-.topnav a:hover {
-    background-color: rgb(255, 255, 255);
+.underlined-element:hover {
+    background-color: #ababab;
     color:black;
+    cursor: pointer;
+    background-size: 100% 5px, auto;
+
+
 }
 
-/* Current navigation link*/
-.topnav a.current {
-    background-color:rgb(105, 157, 253);
-}
 
 /*Style the bottom navigation bar*/
 .botnav {
     overflow:hidden;
     background-color:rgb(40, 40, 40);
-    ;
     width: 100%;
     font-size: 20px;
     bottom: 0;
@@ -88,18 +203,41 @@ div.dark-region p {
     text-align:center;
     padding:14px 16px;
     text-decoration: none;
+    -webkit-transition-duration: 0.4s; /* Safari */
+
+    background-image: linear-gradient(rgb(255, 30, 30),rgb(255, 30, 30));
+    background-size: 0 5px, auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: all .2s ease-out;
+
+    font-size:15px;
 }
 
-/* Style all font awesome icons */
-.fa {
-    font-size:22px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-  }
 
 /* Change navigation link color at mouse hover*/
 .botnav a:hover {
-    background-color: white;
+    background-color: #ababab;
     color:black;
+    cursor: pointer;
+    background-size: 100% 5px, auto;
+}
+
+
+.bottom-region {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 185%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 7px;
+    text-shadow: 2px 2px black;
+    border-radius: 3px;
 }

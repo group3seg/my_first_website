@@ -6,82 +6,81 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!--Link to font-->
-    <link href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 
+    <!--Link to W3 library-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
     <!--Link to CSS sheet-->
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <title>Unison | Home</title>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Unison | Pricing</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
+
 <!--Body of website-->
 
-<body>
-    <div class="top">
-        <!--Top navigation bar-->
+<body onresize="resize()">
+    <!--Top navigation bar-->
+
+    <div>
         <div class="topnav">
-            <a href="index.html">Unison</a>
-            <a href="features.html">Features</a>
-            <a class="current" href="pricing.html">Pricing</a>
-            <a href="team.html">Team</a>
-            <a style="float:right" href="#index">Sign up</a>
-            <a style="float:right" href="#index">Login</a>
+            <a class="text-logo" href="index.html">
+                <div class="logo-container underlined-element" >
+                    <img class="logo" src="logo_transparent.png" href="index.html" alt="Unison">
+                    <div class="logo_animation" id="div_sketch_logo"></div>
+                    <div id="topnav-unison-text">UNISON</div>
+                </div>
+            </a>
+            <div class="right-elements">
+                <a class="team underlined-element" href="team.html">Team</a>
+                <a class="pricing underlined-element" href="pricing.html">Pricing</a>
+                <a class="features underlined-element" href="features.html">Features</a>
+            </div>
+            
         </div>
 
-        <!--Title of page: header-->
-        <div class="header">
-            <h1>Pricing</h1>
-        </div>
-        <div class="header">
-            <p>We Give You Options.</p>
-        </div>
+        <div id="myContainer"></div>
     </div>
 
-    <!--Body of website-->
-    <div style="font-size: 20px;">
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
-        <p>Scroll down</p>
+    <!--Title of page: header-->
+    
+    <div class="bg-image" style="background-image: url(tom-pottiger-l5XnUP7-M4w-unsplash.png)"></div>
 
+
+    <div class="dark-region">
+        <h1>PRICING</h1>
+        <p>WE GIVE YOU <span class="together">OPTIONS</span>.</p>
     </div>
+    
+    <a href="#page">
+        <div class="dark-region-bottom">
+            <p>SEE OPTIONS</p>
+        </div>
+    </a>
 
     <!--Bottom navigation bar-->
     <div class="botnav">
-        <a style="float: right" href="#" class="fa fa-instagram"></a>
-        <a style="float: right" href="#" class="fa fa-twitter"></a>
-        <a style="float: right" href="#" class="fa fa-facebook"></a>
-        <a style="float: right" href="#index">Feedback</a>
-        <a style="float: right" href="#index">Terms and Conditions</a>
-        <a style="float: right" href="#index">Privacy</a>
-        <a style="float: center">Copyright &copy; Unison 2019</a>
+        <a style="float: right" href="#">Contact</a>
+        <a style="float: right" href="#">Terms and Conditions</a>
+        <a style="float: right" href="#">Privacy</a>
+        <a style="float: left" href="#">Copyright &copy; Unison 2019</a>
     </div>
 
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/p5.js"></script>
+    <script src="./scripts/p5.dom.js"></script>
+    <script src="./scripts/p5.sound.js"></script>
+    <script src="./scripts/sketch_logo.js"></script>
+    <script src="./scripts/sketch_music_visualisation.js"></script>
 </body>
 
 </html>
