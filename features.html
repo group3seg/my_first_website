@@ -8,6 +8,9 @@
     <!--Link to font-->
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 
+    <!--Link to W3 library-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
     <!--Link to CSS sheet-->
     <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -20,6 +23,7 @@
     <title>Unison | Features</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
@@ -52,27 +56,31 @@
 
 <body onresize="resize()">
     <!--Top navigation bar-->
-
     <div>
         <div class="topnav">
-            <img class="logo" src="logo.PNG" href="index.html" alt="Unison">
-            <a class="title" style="float:left" href="index.html">UNISON</a>
-            <a class="team" href="team.html">Team</a>
-            <a class="pricing" href="pricing.html">Pricing</a>
-            <a class="features" href="features.html">Features</a>
-
+            <a class="text-logo" href="index.html">
+                <div class="logo-container underlined-element" >
+                    <img class="logo" src="logo_transparent.png" href="index.html" alt="Unison">
+                    <div class="logo_animation" id="div_sketch_logo"></div>
+                    <div id="topnav-unison-text">UNISON</div>
+                </div>
+            </a>
+            <div class="right-elements">
+                <a class="team underlined-element" href="team.html">Team</a>
+                <a class="pricing underlined-element" href="pricing.html">Pricing</a>
+                <a class="features underlined-element" href="features.html">Features</a>
+            </div>
+            
         </div>
-    </div>
-    <div id="myContainer"></div>
 
+        <div id="myContainer"></div>
+    </div>
 
     <!--Title of page: header-->
     <div>
-        <div>
-            <div id="myContainer" style="background-color: rgba(163, 154, 154, 0.1);"></div>
-            <div class="bg-image" style="background-image: url(dylan-mcleod-VRdZBLqnoMU-unsplash-2.png)"></div>
 
-        </div>
+        <div class="bg-image" style="background-image: url(dylan-mcleod-VRdZBLqnoMU-unsplash-2.png)"></div>
+
 
         <div class="dark-region">
             <h1>FEATURES</h1>
@@ -117,6 +125,8 @@
     <script src="./scripts/p5.js"></script>
     <script src="./scripts/p5.dom.js"></script>
     <script src="./scripts/p5.sound.js"></script>
+    <script src="./scripts/sketch_logo.js"></script>
+
     <script src="./scripts/sketch_music_visualisation.js"></script>
 </body>
 
