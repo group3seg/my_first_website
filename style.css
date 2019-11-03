@@ -30,7 +30,7 @@ div.dark-region p {
     font-weight: bold;
     border: 3px solid #f1f1f1;
     position: absolute;
-    top: 60%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -60,7 +60,7 @@ div.dark-region p {
     border: 3px solid #f1f1f1;
     position: absolute;
     
-    top: 80%;
+    top: 50%;
     left: 40%;
     /*transform: translate(-50%, -50%);*/
     z-index: 2;
@@ -98,8 +98,10 @@ div.dark-region p {
 }
 
 #myContainer{
- background-color: rgb(40, 40, 40);
- margin-top: 65.5px;
+ background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0.8));
+ top: calc(100vh - 150px);
+ position: absolute;
+ bottom: 0px;
 }
 
 #div_sketch_logo {
@@ -190,19 +192,38 @@ div.dark-region p {
     display: flex;
     background-color: rgba(0,0,0, 0.4);
     color: white;
-    right: 0px;
+    top: calc(100vh - 45.5px);
+    left: 0px;
     transition: all .2s ease-in-out;
     margin: 5px;
     margin-top: 15px;
     padding-left: 10px;
     padding-right: 10px;
+    z-index: 30;
 
 
 }
 #btn-try-animation:hover {
     transform: scale(1.05);
 }
-
+#animation_purpose_unison {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 180%;
+    left:75%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 40%;
+    height: 50%;
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 7px;
+    text-shadow: 2px 2px black;
+    border-radius: 3px;
+}
 
 /*Style the bottom navigation bar*/
 .botnav {
@@ -248,7 +269,7 @@ div.dark-region p {
     color: white;
     font-weight: bold;
     position: absolute;
-    top: 185%;
+    top: 150%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
