@@ -115,6 +115,7 @@ div.dark-region p {
     position: fixed;
     z-index: 5;
 }
+
 /*Style the top navigation bar*/
 .topnav {
     overflow:hidden;
@@ -225,6 +226,13 @@ div.dark-region p {
     border-radius: 3px;
 }
 
+.icon {
+    position: absolute;
+    z-index: 3;
+}
+.icon-hide {
+    display: none;
+}
 /*Style the bottom navigation bar*/
 .botnav {
     overflow:hidden;

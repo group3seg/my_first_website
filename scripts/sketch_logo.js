@@ -24,10 +24,10 @@ const s1 = ( sketch ) => {
     img1.loadPixels();
     for (let i = 0; i < img1.width; i++) {
       for (let j = 0; j < img1.height; j++) {
-        if (((i-(45))**2 + (j-(35))**2)**0.5 < w/3){
+        if (((i-(43))**2 + (j-(38))**2)**0.5 < w/3.5){
           if (animate){
             let noiseVal = sketch.noise((count+i)*noiseScale) * 255;
-            img1.set(i, j, sketch.color((noiseVal)*0.65, (noiseVal)*0.3, 50));
+            img1.set(i, j, sketch.color((noiseVal)*0.9, (noiseVal)*0.9, (noiseVal)*0.9));
           }
           
         }
