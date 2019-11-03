@@ -165,16 +165,18 @@ const s = ( sketch ) => {
         });
       mic = new p5.AudioIn();
       mic.start();
-        micro = new p5.FFT();
-        micro.setInput(mic);
+      micro = new p5.FFT();
+      micro.setInput(mic);
+      document.getElementById("btn-try-animation").innerHTML = "Stop";
         
     }
     else {
-        console.log("audio stopped");
+      console.log("audio stopped");
       mic.stop();
       delete mic
       delete micro;
       micro = undefined;
+      document.getElementById("btn-try-animation").innerHTML = "Try the animation yourself!";
     }
   }
 
@@ -187,3 +189,6 @@ function resize(){
   myp5.resize();
 }
 
+function try_it(){
+  myp5.try_it();
+}
