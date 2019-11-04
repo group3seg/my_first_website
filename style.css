@@ -166,6 +166,7 @@ div.dark-region p {
 
     
 }
+
 .text-logo {
     padding-left: 0px;
     padding-right: 5px;
@@ -279,13 +280,6 @@ div.dark-region p {
     background-size: 100% 5px, auto;
 }
 
-
-.current-features {
-    
-    background-color: linear-gradient(rgb(255, 30, 30),rgb(255, 30, 30));
-    background-size: 0 5px, auto;
-}
-
 .bottom-region {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
@@ -302,4 +296,169 @@ div.dark-region p {
     letter-spacing: 7px;
     text-shadow: 2px 2px black;
     border-radius: 3px;
+}
+
+
+.bottom-region-options {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    font-weight: bold;
+    position: absolute;
+    top: 140%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 4px;
+    border-radius: 3px;
+
+    margin: auto;
+
+}
+
+.student {
+    width: 300px;
+    padding:20px;
+    box-shadow: 2px 2px black;
+    transition: all .2s ease-in-out;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px black;
+
+    float: left;
+}
+
+
+.leisure {
+    width: 300px;
+    padding:20px;
+    box-shadow: 2px 2px black;
+    transition: all .2s ease-in-out;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px black;
+
+    float: left;
+}
+
+.professional {
+    width:300px;
+    padding:20px;
+    box-shadow: 2px 2px black;
+    transition: all .2s ease-in-out;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px black;
+    float:left;
+}
+
+.student:hover {
+    width: 300px;
+    padding:20px;
+    box-shadow: inset 0px 0px 0px black;
+}
+
+
+.leisure:hover {
+    width: 300px;
+    padding:20px;
+    box-shadow: inset 0px 0px 0px black;
+
+}
+
+.professional:hover {
+    width: 300px;
+    padding:20px;
+    box-shadow: inset 0px 0px 0px black;
+
+}
+
+.fl-studio {
+    width: 80px;
+    height: 100px;
+    float:left;
+}
+.fl-studio img {
+    width: 100%;
+    height: auto;
+}
+
+.logic-pro {
+    width: 100px;
+    height: 100px;
+    float:left;
+}
+.logic-pro img {
+    width: 100%;
+    height: auto;
+}
+
+.ableton {
+    width: 100px;
+    height: 100px;
+    float:left;
+}
+.ableton img {
+    width: 100%;
+    height: auto;
+}
+
+
+.cubase {
+    width: 100px;
+    height: 100px;
+    float:left;
+}
+.cubase img {
+    width: 100%;
+    height: auto;
+}
+
+.reason {
+    width: 100px;
+    height: 100px;
+    float:left;
+}
+.reason img {
+    width: 100%;
+    height: auto;
+}
+
+.garageband {
+    width: 100px;
+    height: 100px;
+    float:left;
+}
+.garageband img {
+    width: 100%;
+    height: auto;
+}
+
+.bitwig {
+    width: 100px;
+    height: 100px;
+    float:left;
+}
+.bitwig img {
+    width: 100%;
+    height: auto;
+}
+
+.digital-performer {
+    width: 100px;
+    height: 100px;
+    float:left;
+}
+.digital-performer img {
+    width: 100%;
+    height: auto;
+}
+
+.pro-tools {
+    width: 100px;
+    height: 100px;
+    float:left;
+}
+.pro-tools img {
+    width: 100%;
+    height: auto;
 }
