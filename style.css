@@ -218,7 +218,7 @@ div.dark-region p {
     top: var(--canvas-animation-y);
     left: var(--canvas-animation-x);
     z-index: 2;
-    width: 40%;
+    width: 45%;
     height: 50%;
     padding: 20px;
     text-align: center;
@@ -233,17 +233,32 @@ div.dark-region p {
     color: white;
     text-align: center;
     display: block;
-    font-size: 0.7vw;
+    font-size: 60%;
 }
 .icon-hide {
     display: none;
 }
 .icon-img {
     display: block;
-    width: 10%;
-    height: 10%;
+    width: 40px;
+    height: 40px;
     margin-left: auto;
     margin-right: auto;
+}
+.text-sketch-unison {
+    font-size: 300%;
+    position: absolute;
+    z-index: 3;
+    color: white;
+    
+}
+@media only screen and (max-width: 930px) {
+  .icon-text {
+    display: none;
+  }
+  .text-sketch-unison {
+    font-size: 100%;
+  }
 }
 /*Style the bottom navigation bar*/
 .botnav {
