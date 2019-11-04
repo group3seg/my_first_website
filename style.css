@@ -140,9 +140,6 @@ div.dark-region p {
     align-items: center;
     padding-left: 0px !important;
     margin-top: 0px;
-    background-image: linear-gradient(rgb(255, 0, 0),rgb(255, 0, 0));
-
-
 }
 #topnav-unison-text {
     margin-left: 90px;
@@ -186,8 +183,6 @@ div.dark-region p {
 }
 /* Change navigation link color at mouse hover*/
 .underlined-element:hover {
-    background-color: #ababab;
-    color:black;
     cursor: pointer;
     background-size: 100% 5px, auto;
 
@@ -280,12 +275,16 @@ div.dark-region p {
 
 /* Change navigation link color at mouse hover*/
 .botnav a:hover {
-    background-color: #ababab;
-    color:black;
     cursor: pointer;
     background-size: 100% 5px, auto;
 }
 
+
+.current-features {
+    
+    background-color: linear-gradient(rgb(255, 30, 30),rgb(255, 30, 30));
+    background-size: 0 5px, auto;
+}
 
 .bottom-region {
     background-color: rgb(0,0,0); /* Fallback color */
