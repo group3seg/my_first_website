@@ -249,6 +249,21 @@ div.dark-region p {
     margin-left: auto;
     margin-right: auto;
 }
+.text-sketch-unison {
+    font-size: 300%;
+    position: absolute;
+    z-index: 3;
+    color: white;
+    
+}
+@media only screen and (max-width: 930px) {
+  .icon-text {
+    display: none;
+  }
+  .text-sketch-unison {
+    font-size: 100%;
+  }
+}
 /*Style the bottom navigation bar*/
 .botnav {
     overflow:hidden;
