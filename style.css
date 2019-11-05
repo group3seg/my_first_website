@@ -174,7 +174,7 @@ div.dark-region p {
 
 .together {
     font-weight: bold;
-    color:rgb(255, 30, 30);
+    color:rgb(153, 18, 142);
 }
 
 /* Style the top navigation links */
@@ -319,49 +319,16 @@ div.dark-region p {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    font-size:20px;
-    width: 90%;
-    padding: 20px;
+    font-size:16px;
+    width: 70%;
+    padding: 10px;
     text-align: center;
     letter-spacing: 7px;
     text-shadow: 2px 2px black;
     border-radius: 3px;
-    line-height:40px;
+    line-height:25px;
 }
 
-.studios1 {
-    color: white;
-    font-weight: bold;
-    position: absolute;
-    top: 152%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 95%;
-    padding: 50px;
-    text-align: center;
-    letter-spacing: 7px;
-    text-shadow: 2px 2px black;
-    border-radius: 3px;
-}
-
-
-.studios2 {
-    color: white;
-    font-weight: bold;
-    position: absolute;
-    top: 182%;
-    left: 50%;
-    float:left;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 50%;
-    padding: 50px;
-    text-align: center;
-    letter-spacing: 7px;
-    text-shadow: 2px 2px black;
-    border-radius: 3px;
-}
 
 .bottom-region-options {
     background-color: rgba(0,0,0, 00); /* Black w/opacity/see-through */
@@ -417,9 +384,43 @@ div.dark-region p {
 }
 
 
+.studios1 {
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 145%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 95%;
+    padding: 50px;
+    text-align: center;
+    letter-spacing: 7px;
+    text-shadow: 2px 2px black;
+    border-radius: 3px;
+}
+
+
+.studios2 {
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 170%;
+    left: 50%;
+    float:left;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 50%;
+    padding: 50px;
+    text-align: center;
+    letter-spacing: 7px;
+    text-shadow: 2px 2px black;
+    border-radius: 3px;
+}
+
 .studio {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     margin: 0 auto;
     text-align: center;
     display: block;
@@ -495,4 +496,62 @@ div.dark-region p {
 
 .selector {
     padding:20px;
+}
+
+
+.linker {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    border: 3px solid rgb(153, 18, 142);
+    position: absolute;
+    
+    top: 187%;
+    left: 40%;
+    /*transform: translate(-50%, -50%);*/
+    z-index: 2;
+    width: 18%;
+    padding: 2px;
+
+    text-align: center;
+    transition: all .2s ease-in-out;
+
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px black;
+    box-shadow: 2px 2px black;
+
+    }
+
+.linker:hover {
+    transform: scale(1.1);
+}
+
+
+.linker2 {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    border: 3px solid rgb(153, 18, 142);
+    position: absolute;
+    
+    top: 180%;
+    left: 40%;
+    /*transform: translate(-50%, -50%);*/
+    z-index: 2;
+    width: 18%;
+    padding: 2px;
+
+    text-align: center;
+    transition: all .2s ease-in-out;
+
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px black;
+    box-shadow: 2px 2px black;
+
+    }
+
+.linker2:hover {
+    transform: scale(1.1);
 }
