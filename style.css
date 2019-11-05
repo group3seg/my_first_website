@@ -353,93 +353,12 @@ div.dark-region p {
 
 }
 
-.fl-studio {
+.studio {
     width: 80px;
     height: 100px;
     float:left;
 }
-.fl-studio img {
-    width: 100%;
-    height: auto;
-}
-
-.logic-pro {
-    width: 100px;
-    height: 100px;
-    float:left;
-}
-.logic-pro img {
-    width: 100%;
-    height: auto;
-}
-
-.ableton {
-    width: 100px;
-    height: 100px;
-    float:left;
-}
-.ableton img {
-    width: 100%;
-    height: auto;
-}
-
-
-.cubase {
-    width: 100px;
-    height: 100px;
-    float:left;
-}
-.cubase img {
-    width: 100%;
-    height: auto;
-}
-
-.reason {
-    width: 100px;
-    height: 100px;
-    float:left;
-}
-.reason img {
-    width: 100%;
-    height: auto;
-}
-
-.garageband {
-    width: 100px;
-    height: 100px;
-    float:left;
-}
-.garageband img {
-    width: 100%;
-    height: auto;
-}
-
-.bitwig {
-    width: 100px;
-    height: 100px;
-    float:left;
-}
-.bitwig img {
-    width: 100%;
-    height: auto;
-}
-
-.digital-performer {
-    width: 100px;
-    height: 100px;
-    float:left;
-}
-.digital-performer img {
-    width: 100%;
-    height: auto;
-}
-
-.pro-tools {
-    width: 100px;
-    height: 100px;
-    float:left;
-}
-.pro-tools img {
+.studio img {
     width: 100%;
     height: auto;
 }
