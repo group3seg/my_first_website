@@ -361,14 +361,15 @@ div.dark-region p {
     text-align: center;
     display: block;
     position: relative;
-
 }
 .studio-text {
     text-align: center;
     width: 100%;
-    font-size: 0.5vw;
+    font-size: 1vw;
 }
 .studio img {
     width: 100%;
-    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
