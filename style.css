@@ -342,6 +342,11 @@ div.dark-region p {
     transform: scale(1.1);
 }
 
+.picture-team {
+    border-radius: calc(20vh/2);
+    width: 20vh;
+    height: 20vh;
+}
 
 
 .studio {
