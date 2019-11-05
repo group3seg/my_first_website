@@ -323,7 +323,7 @@ div.dark-region p {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    font-size:16px;
+    font-size: calc(0.5vw + 0.5rem);
     width: 70%;
     padding: 10px;
     text-align: center;
