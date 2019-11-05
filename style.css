@@ -449,9 +449,11 @@ div.dark-region p {
 
 .arrow{
     position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    top: 65%;
+    width: 100%; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
 }
 .arrow span{
     display: block;
