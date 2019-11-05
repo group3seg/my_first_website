@@ -194,6 +194,9 @@ div.dark-region p {
     
 }
 
+.lst li{
+    padding-bottom: 30px;
+}
 .text-logo {
     padding-left: 0px;
     padding-right: 5px;
@@ -255,7 +258,7 @@ div.dark-region p {
     height: 60px;
     margin-left: auto;
     margin-right: auto;
-    
+
 }
 .text-sketch-unison {
     font-size: 300%;
@@ -269,7 +272,7 @@ div.dark-region p {
     display: none;
   }
   .text-sketch-unison {
-    font-size: 100%;
+    font-size: 160%;
   }
 }
 /*Style the bottom navigation bar*/
