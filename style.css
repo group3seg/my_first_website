@@ -87,6 +87,33 @@ div.dark-region p {
     transform: scale(1.1);
 }
 
+.dark-region-bottom-2 {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    
+    top: 65%;
+    left: 40%;
+    /*transform: translate(-50%, -50%);*/
+    z-index: 2;
+    width: 18%;
+    padding: 2px;
+
+    text-align: center;
+    transition: all .2s ease-in-out;
+
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px black;
+    box-shadow: 2px 2px black;
+
+    }
+
+.dark-region-bottom-2:hover {
+    transform: scale(1.1);
+}
 
 .bg-image {
     /* Add the blur effect */
@@ -283,14 +310,35 @@ div.dark-region p {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
     color: white;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    color: white;
     font-weight: bold;
     position: absolute;
-    top: 150%;
+    top: 125%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+    font-size:20px;
     width: 90%;
     padding: 20px;
+    text-align: center;
+    letter-spacing: 7px;
+    text-shadow: 2px 2px black;
+    border-radius: 3px;
+    line-height:40px;
+}
+
+.studios1 {
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 152%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 95%;
+    padding: 50px;
     text-align: center;
     letter-spacing: 7px;
     text-shadow: 2px 2px black;
@@ -298,11 +346,28 @@ div.dark-region p {
 }
 
 
+.studios2 {
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 182%;
+    left: 50%;
+    float:left;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 50%;
+    padding: 50px;
+    text-align: center;
+    letter-spacing: 7px;
+    text-shadow: 2px 2px black;
+    border-radius: 3px;
+}
+
 .bottom-region-options {
     background-color: rgba(0,0,0, 00); /* Black w/opacity/see-through */
     font-weight: bold;
     position: absolute;
-    top: 140%;
+    top: 150%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -337,6 +402,9 @@ div.dark-region p {
     margin-left: 1%;
     margin-right: 1%;
     font-size: 2vh;
+    box-shadow: inset 0px 0px 4px black;
+    letter-spacing: 4px;
+    font-weight: bold;
 }
 .team-container:hover {
     transform: scale(1.1);
@@ -350,10 +418,9 @@ div.dark-region p {
 
 
 .studio {
-    width: 80px;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
     text-align: center;
     display: block;
     position: relative;
@@ -362,10 +429,70 @@ div.dark-region p {
     text-align: center;
     width: 100%;
     font-size: 1vw;
+    padding:15px;
 }
 .studio img {
     width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    transition: all .2s ease-in-out;
+
+}
+
+.studio img:hover {
+    transform: scale(1.1);
+}
+
+.arrow{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.arrow span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid rgb(255, 255, 255);
+    border-right: 5px solid rgb(255, 255, 255);
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+.arrow span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+    animation-delay: -0.4s;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
+
+.select {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    border: 3px solid #f1f1f1;
+    transition: all .2s ease-in-out;
+
+}
+
+.select:hover {
+    transform: scale(1.1);
+}
+
+.selector {
+    padding:20px;
 }
