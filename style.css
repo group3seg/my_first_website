@@ -251,10 +251,11 @@ div.dark-region p {
 }
 .icon-img {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     margin-left: auto;
     margin-right: auto;
+    
 }
 .text-sketch-unison {
     font-size: 300%;
