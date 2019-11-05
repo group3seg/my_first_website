@@ -328,6 +328,20 @@ div.dark-region p {
     transform: scale(1.1);
 }
 
+.team-container {
+    width: 20%;
+    padding:20px;
+    transition: all .2s ease-in-out;
+    background-color: rgba(100, 100, 100, 0.4);
+    color: white;
+    margin-left: 1%;
+    margin-right: 1%;
+    font-size: 2vh;
+}
+.team-container:hover {
+    transform: scale(1.1);
+}
+
 
 
 .studio {
