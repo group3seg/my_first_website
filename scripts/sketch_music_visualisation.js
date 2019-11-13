@@ -5,7 +5,11 @@ const s = ( sketch ) => {
   var time = 0;
   var inc = 0.01;
 
-  var last_unison_animation = 0;
+  let last_unison_animation = 0;
+  let unison_trigger_animation = false;
+  let unison_finish_animation = false;
+  let unison_animation = false;
+
   var wanted_height = 150;
   var wanted_width = document.body.clientWidth;
 
@@ -23,8 +27,6 @@ const s = ( sketch ) => {
   var maximum = 50;
   var avg = 0;
 
-  let transition_down = false;
-  let transition_up = false;
 
   sketch.setup = () => {
     let cnv = sketch.createCanvas(wanted_width, wanted_height);
@@ -65,6 +67,23 @@ const s = ( sketch ) => {
       maximum = maximum - ((maximum - temp_max)/5);
       minimum = minimum - ((minimum - temp_min)/5);
 
+      if (Math.round((time+5)*100)/100 == 50){
+        unison_trigger_animation = true;
+        unison_animation = true;
+        unison_finish_animation = false;
+      }
+      else if (time >= 70){
+        time = 0;
+        unison_animation = false;
+        unison_trigger_animation = false;
+        unison_finish_animation = true;
+      }
+      else {
+        unison_trigger_animation = false;
+        unison_finish_animation = false;
+        unison_animation = false;
+      }
+      
 
       for (let new_x = 0; new_x < sketch.width; new_x += 1) {
         var is_bar = false;
@@ -97,19 +116,18 @@ const s = ( sketch ) => {
             bars[bar_idx] = new Bar(sketch.height, vertical_arr_unison);
           }
           else{
-            
-            if (Math.round(time*1000)/1000 % 50 == 0){
-              bars[bar_idx].update_pixels_with_state(bar_height, true);
-              time = 0;
-              last_unison_animation = time;
+            if (unison_trigger_animation){
+              bars[bar_idx].state = 1
+              bars[bar_idx].update_pixels_with_state(bar_height);
             }
             else {
-              if(time > last_unison_animation+0.2 && bars[bar_idx].state == 2){
+              if(unison_finish_animation == true){
                 bars[bar_idx].state = 3;
-                last_unison_animation = time;
               }
-              bars[bar_idx].update_pixels_with_state(bar_height, false);
+              bars[bar_idx].update_pixels_with_state(bar_height);
             }
+            if (bar_idx == 0) {console.log(bars[bar_idx].state)}
+            
           }
           var col = sketch.color(sketch.map(new_x, 0, wanted_width, 0, 235), 255, 255);
           var r = sketch.red(col);
@@ -167,8 +185,7 @@ const s = ( sketch ) => {
     this.h = 0;
     this.state = 0;
 
-    this.update_pixels_with_state = function(h, trigger=false){
-      if (trigger) {this.state = 1}
+    this.update_pixels_with_state = function(h){
       if (this.state == 0){
         this.h = h;
         this.update_pixels();
@@ -187,7 +204,7 @@ const s = ( sketch ) => {
       }
       else if (this.state == 3) {
         this.h = this.h + 5;
-        this.update_pixels();
+        this.update_pixels_with_unison();
         if (this.h >= this.max_h) {
           this.state = 0;
         }
