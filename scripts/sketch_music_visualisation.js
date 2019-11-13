@@ -5,7 +5,6 @@ const s = ( sketch ) => {
   var time = 0;
   var inc = 0.01;
 
-  let last_unison_animation = 0;
   let unison_trigger_animation = false;
   let unison_finish_animation = false;
   let unison_animation = false;
@@ -67,12 +66,12 @@ const s = ( sketch ) => {
       maximum = maximum - ((maximum - temp_max)/5);
       minimum = minimum - ((minimum - temp_min)/5);
 
-      if (Math.round((time+5)*100)/100 == 50){
+      if (Math.round((time+5)*100)/100 == 70){
         unison_trigger_animation = true;
         unison_animation = true;
         unison_finish_animation = false;
       }
-      else if (time >= 70){
+      else if (time >= 80){
         time = 0;
         unison_animation = false;
         unison_trigger_animation = false;
@@ -113,7 +112,7 @@ const s = ( sketch ) => {
             }
             
 
-            bars[bar_idx] = new Bar(sketch.height, vertical_arr_unison);
+            bars[bar_idx] = new Bar(sketch.height, vertical_arr_unison, bar_idx);
           }
           else{
             if (unison_trigger_animation){
@@ -122,7 +121,7 @@ const s = ( sketch ) => {
             }
             else {
               if(unison_finish_animation == true){
-                bars[bar_idx].state = 3;
+                bars[bar_idx].state = 4;
               }
               bars[bar_idx].update_pixels_with_state(bar_height);
             }
@@ -178,12 +177,14 @@ const s = ( sketch ) => {
     sketch.resizeCanvas(wanted_width, wanted_height, true)
   }
 
-  function Bar(max_h, animation_array){
+  function Bar(max_h, animation_array, wait_time){
     this.max_h = max_h;
     this.animation_array = animation_array;
     this.arr = Array(max_h).fill(0);
     this.h = 0;
     this.state = 0;
+    this.wait_time = wait_time
+    this.count_wait_time = 0
 
     this.update_pixels_with_state = function(h){
       if (this.state == 0){
@@ -207,6 +208,16 @@ const s = ( sketch ) => {
         this.update_pixels_with_unison();
         if (this.h >= this.max_h) {
           this.state = 0;
+        }
+      }
+      else if (this.state == 4) {
+        this.h = this.h - 5;
+        this.update_pixels_with_unison();
+        if (this.h < 0) {this.h = 0}
+        this.count_wait_time += 23;
+        if (this.count_wait_time >= this.wait_time){
+          this.count_wait_time = 0;
+          this.state = 3;
         }
       }
     }
@@ -234,13 +245,7 @@ const s = ( sketch ) => {
         }
       }
     }
-    // this.update_pixels_down = function(){
-    //   e--;
-    //   for (let e = 0; e < this.max_h ; e++){
-    //     this.arr[e] -= 1;
-    //     if (this.arr[e] < 0 ){this.arr[e] = 0}
-    //   }
-        
+
     
     // }
     this.get_pixel = function(y){
