@@ -5,7 +5,7 @@ const s = ( sketch ) => {
   var time = 0;
   var inc = 0.01;
 
-
+  var last_unison_animation = 0;
   var wanted_height = 150;
   var wanted_width = document.body.clientWidth;
 
@@ -22,6 +22,9 @@ const s = ( sketch ) => {
   var minimum = -50;
   var maximum = 50;
   var avg = 0;
+
+  let transition_down = false;
+  let transition_up = false;
 
   sketch.setup = () => {
     let cnv = sketch.createCanvas(wanted_width, wanted_height);
@@ -76,16 +79,37 @@ const s = ( sketch ) => {
 
           var xoff = 1;
 
-          
-          
-          
+
+
+
 
           var bar_height = sketch.map(Math.round(spectrum[x_data]), minimum, maximum, wanted_height, 0);
           if (typeof bars[bar_idx] === 'undefined'){
-            bars[bar_idx] = new Bar(sketch.height);
+            let vertical_arr_unison = Array();
+
+            for (let height_unison = 0; height_unison < sketch.height; height_unison++){
+              let x = Math.round(sketch.map(height_unison, 0, sketch.height, 0, data1.length-1));
+              let y = Math.round(sketch.map(new_x, 0, sketch.width, 0, data1[0].length-1));
+              vertical_arr_unison[height_unison] = data1[x][y];
+            }
+            
+
+            bars[bar_idx] = new Bar(sketch.height, vertical_arr_unison);
           }
           else{
-            bars[bar_idx].update_pixels(bar_height);
+            
+            if (Math.round(time*1000)/1000 % 50 == 0){
+              bars[bar_idx].update_pixels_with_state(bar_height, true);
+              time = 0;
+              last_unison_animation = time;
+            }
+            else {
+              if(time > last_unison_animation+0.2 && bars[bar_idx].state == 2){
+                bars[bar_idx].state = 3;
+                last_unison_animation = time;
+              }
+              bars[bar_idx].update_pixels_with_state(bar_height, false);
+            }
           }
           var col = sketch.color(sketch.map(new_x, 0, wanted_width, 0, 235), 255, 255);
           var r = sketch.red(col);
@@ -136,22 +160,72 @@ const s = ( sketch ) => {
     sketch.resizeCanvas(wanted_width, wanted_height, true)
   }
 
-  function Bar(max_h){
+  function Bar(max_h, animation_array){
     this.max_h = max_h;
+    this.animation_array = animation_array;
     this.arr = Array(max_h).fill(0);
-    this.update_pixels = function(h){
+    this.h = 0;
+    this.state = 0;
+
+    this.update_pixels_with_state = function(h, trigger=false){
+      if (trigger) {this.state = 1}
+      if (this.state == 0){
+        this.h = h;
+        this.update_pixels();
+      }
+      else if (this.state == 1){
+        this.h = this.h + 5;
+        this.update_pixels();
+        if (this.h >= this.max_h) {
+          this.state = 2;
+        }
+      }
+      else if (this.state == 2) {
+        this.h = this.h - 5;
+        this.update_pixels_with_unison();
+        if (this.h < 0) {this.h = 0}
+      }
+      else if (this.state == 3) {
+        this.h = this.h + 5;
+        this.update_pixels();
+        if (this.h >= this.max_h) {
+          this.state = 0;
+        }
+      }
+    }
+    this.update_pixels = function() {
       for (let e = 0; e < this.max_h ; e++){
-        if (e > h){
+        if (e > this.h) {
           this.arr[e] += 50;
           if (this.arr[e] >255){this.arr[e] = 255}
-
         }
-        else{
+        else {
           this.arr[e] -= 50;
           if (this.arr[e] < 0 ){this.arr[e] = 0}
         }
       }
     }
+    this.update_pixels_with_unison = function() {
+      for (let e = 0; e < this.max_h ; e++){
+        if (e > this.h) {
+          this.arr[e] = 255 - (255 * this.animation_array[e]);
+          if (this.arr[e] >255){this.arr[e] = 255}
+        }
+        else {
+          this.arr[e] -= 50;
+          if (this.arr[e] < 0 ){this.arr[e] = 0}
+        }
+      }
+    }
+    // this.update_pixels_down = function(){
+    //   e--;
+    //   for (let e = 0; e < this.max_h ; e++){
+    //     this.arr[e] -= 1;
+    //     if (this.arr[e] < 0 ){this.arr[e] = 0}
+    //   }
+        
+    
+    // }
     this.get_pixel = function(y){
       return this.arr[y];
     }
