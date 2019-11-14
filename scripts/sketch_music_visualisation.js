@@ -70,7 +70,7 @@ const s = ( sketch ) => {
         unison_animation = true;
         unison_finish_animation = false;
       }
-      else if (time >= 70){
+      else if (time >= 65){
         time = 0;
         unison_animation = false;
         unison_trigger_animation = false;
