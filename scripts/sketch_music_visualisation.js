@@ -2,7 +2,7 @@
 
 const s = ( sketch ) => {
   var index = 0;
-  var time = 0;
+  var time = 50;
   var inc = 0.01;
 
   let unison_trigger_animation = false;
@@ -20,11 +20,10 @@ const s = ( sketch ) => {
   var micro = undefined;
 
 
-  let slider;
+
 
   var minimum = -50;
   var maximum = 50;
-  var avg = 0;
 
 
   sketch.setup = () => {
@@ -66,12 +65,12 @@ const s = ( sketch ) => {
       maximum = maximum - ((maximum - temp_max)/5);
       minimum = minimum - ((minimum - temp_min)/5);
 
-      if (Math.round((time+5)*100)/100 == 70){
+      if (Math.round((time+5)*100)/100 == 60){
         unison_trigger_animation = true;
         unison_animation = true;
         unison_finish_animation = false;
       }
-      else if (time >= 80){
+      else if (time >= 70){
         time = 0;
         unison_animation = false;
         unison_trigger_animation = false;
@@ -125,7 +124,6 @@ const s = ( sketch ) => {
               }
               bars[bar_idx].update_pixels_with_state(bar_height);
             }
-            if (bar_idx == 0) {console.log(bars[bar_idx].state)}
             
           }
           var col = sketch.color(sketch.map(new_x, 0, wanted_width, 0, 235), 255, 255);
@@ -185,6 +183,7 @@ const s = ( sketch ) => {
     this.state = 0;
     this.wait_time = wait_time
     this.count_wait_time = 0
+    this.speed = 10;
 
     this.update_pixels_with_state = function(h){
       if (this.state == 0){
@@ -192,29 +191,29 @@ const s = ( sketch ) => {
         this.update_pixels();
       }
       else if (this.state == 1){
-        this.h = this.h + 5;
+        this.h = this.h + this.speed;
         this.update_pixels();
         if (this.h >= this.max_h) {
           this.state = 2;
         }
       }
       else if (this.state == 2) {
-        this.h = this.h - 5;
+        this.h = this.h - this.speed;
         this.update_pixels_with_unison();
         if (this.h < 0) {this.h = 0}
       }
       else if (this.state == 3) {
-        this.h = this.h + 5;
+        this.h = this.h + this.speed;
         this.update_pixels_with_unison();
         if (this.h >= this.max_h) {
           this.state = 0;
         }
       }
       else if (this.state == 4) {
-        this.h = this.h - 5;
+        this.h = this.h - this.speed;
         this.update_pixels_with_unison();
         if (this.h < 0) {this.h = 0}
-        this.count_wait_time += 23;
+        this.count_wait_time += 60;
         if (this.count_wait_time >= this.wait_time){
           this.count_wait_time = 0;
           this.state = 3;
