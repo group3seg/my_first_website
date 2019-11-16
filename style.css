@@ -327,17 +327,18 @@ div.dark-region p {
 }
 .pricing-flex-container {
     display: flex;
+    flex-flow: row-reverse wrap;
     justify-content: center;
 }
 
 .pricing-container {
     width: 30%;
+    min-width: 300px;
     padding:20px;
     transition: all .2s ease-in-out;
     background-color: rgba(100, 100, 100, 0.4);
     color: white;
-    margin-left: 1%;
-    margin-right: 1%;
+    margin: 1%;
     font-size: 2vh;
 }
 .pricing-container:hover {
