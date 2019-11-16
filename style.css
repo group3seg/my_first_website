@@ -190,6 +190,17 @@ div.dark-region p {
 
 
 }
+.icons-topnav {
+    position: absolute;
+    right: 10px;
+    top: 77px;
+    background-color: rgba(0, 0, 0, 0);
+}
+.icon-img-topnav {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
 
 #btn-try-animation {
     position: absolute;
