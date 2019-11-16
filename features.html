@@ -119,7 +119,9 @@
         </div>
 
         <div class="feature-animation-container">
-            
+            <img src="./animations/animation_feature_logos.png" class="feature-animation-img">
+            <img src="./animations/animation_feature_lines.png" class="feature-animation-img">
+            <img src="./animations/animation_feature_unison.png" class="feature-animation-img">
         </div>
 
         <!-- <div class="icon" id="logo0" style="top: calc(var(--canvas-animation-y) + 9%); left: calc(var(--canvas-animation-x) + 12%); " >
@@ -166,14 +168,18 @@
         <div class="text-sketch-unison" style="top: calc(var(--canvas-animation-y) + 20%); left: calc(var(--canvas-animation-x) + 18%); width: 25%; height: 25%;">
             UNISON
         </div> -->
+        <div class="dark-region-bottom" style="top: 175vh; position: absolute; left: 60vw;" onmouseover="without_unison()">
+            <p>Without Unison</p>
+        </div>
+        <div class="dark-region-bottom" style="top: 175vh; position: absolute; left: 80vw;" onmouseover="with_unison()">
+            <p>With Unison</p>
+        </div>
 
         <a href="options.html">
-        <div class="dark-region-bottom" style="top: 175vh; position: absolute; left: 63vw;">
-            <p>START NOW</p>
-        </div>
-        </a>
-
-        
+            <div class="dark-region-bottom" style="top: 185vh; position: absolute; left: 40vw;">
+                <p>START NOW</p>
+            </div>
+        </a>        
     </div>
 
 
@@ -194,15 +200,19 @@
     <script src="./scripts/sketch_music_visualisation.js"></script>
     <script src="./scripts/scroll_down.js"></script>
     <script type="text/javascript">
-        //var c = document.getElementById("animation_purpose_unison");
-        //var ctx = c.getContext("2d");
-
-
-        function without(){
-            // if (){document.getElementById("logo1").classList.add('icon-hide');}
-            // else {document.getElementById("logo1").classList.remove('icon-hide');}
-
+        var state = false;
+        function without_unison(){
+            if (! state) {
+                state = ! state
+                console.log("without");
+            }
             
+        }
+        function with_unison () {
+            if (state) {
+                state = ! state
+                console.log("with unison");
+            }
         }
 
         
