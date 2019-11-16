@@ -9,7 +9,7 @@ html {
 /* Remove margin from body*/
 body {
     margin:0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 
 }
 
@@ -324,6 +324,10 @@ div.dark-region p {
     letter-spacing: 4px;
     margin: auto;
 
+}
+.pricing-flex-container {
+    display: flex;
+    justify-content: center;
 }
 
 .pricing-container {
