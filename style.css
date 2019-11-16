@@ -19,7 +19,7 @@ div.dark-region h1 {
     line-height:20px;
     font-weight:bold;
     margin: 0px;
-    padding-top: 60px;
+    padding-top: 5vh;
 }
 
 /* Style text in top of page */
@@ -27,6 +27,7 @@ div.dark-region p {
     font-size:20px;
     line-height:20px;
     padding-top: 30px;
+    display: inline-block;
 }
 
 
@@ -37,19 +38,21 @@ div.dark-region p {
     color: white;
     font-weight: bold;
     border: 3px solid #f1f1f1;
-    position: absolute;
-    top: 30%;
+    position: relative;
+    top: 30vh;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
     width: 50%;
-    padding: 20px;
+    padding: 1.5%;
     text-align: center;
     letter-spacing: 7px;
     text-shadow: 2px 2px black;
     box-shadow: 2px 2px black;
     box-shadow: inset 0px 0px 15px black;
     transition: all .2s ease-in-out;
+    display: block;
+    width: min-content;
 }
 
 .dark-region:hover {
@@ -68,7 +71,6 @@ div.dark-region p {
     border: 3px solid #f1f1f1;
 
     z-index: 2;
-    width: auto;
     padding: 2px 30px 2px 30px;
 
     text-align: center;
@@ -83,6 +85,13 @@ div.dark-region p {
 
 .dark-region-bottom:hover {
     transform: scale(1.1);
+}
+
+.dark-region-bottom-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
 }
 
 
@@ -441,8 +450,8 @@ div.dark-region p {
 }
 
 .arrow{
-    position: absolute;
-    top: 65%;
+    position: relative;
+    top: 30vh;
     width: 100%; 
     display: flex; 
     justify-content: center;
