@@ -119,9 +119,9 @@
         </div>
 
         <div class="feature-animation-container">
-            <img src="./animations/animation_feature_logos.png" class="feature-animation-img">
-            <img src="./animations/animation_feature_lines.png" class="feature-animation-img">
-            <img src="./animations/animation_feature_unison.png" class="feature-animation-img">
+            <img src="./animations/animation_feature_logos.png" class="feature-animation-img" id="img-feature-logos">
+            <img src="./animations/animation_feature_lines.png" class="feature-animation-img" id="img-features-lines">
+            <img src="./animations/animation_feature_unison.png" class="feature-animation-img" id="img-features-unison">
         </div>
 
         <!-- <div class="icon" id="logo0" style="top: calc(var(--canvas-animation-y) + 9%); left: calc(var(--canvas-animation-x) + 12%); " >
@@ -201,17 +201,46 @@
     <script src="./scripts/scroll_down.js"></script>
     <script type="text/javascript">
         var state = false;
+        var o = 0;
+        function fadeIn(el) {
+            el.style.opacity = 0;
+            var tick = function () {
+                el.style.opacity = +el.style.opacity + 0.05;
+                if (+el.style.opacity < 1) {
+                    (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16)
+                }
+            };
+            tick();
+        }
+        function fadeOut(el) {
+            el.style.opacity = 1;
+            var tick = function () {
+                el.style.opacity = +el.style.opacity - 0.05;
+                if (+el.style.opacity > 0) {
+                    (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16)
+                }
+            };
+            tick();
+        }
         function without_unison(){
+            el1 = document.getElementById("img-features-lines");
+            el2 = document.getElementById("img-features-unison");
             if (! state) {
-                state = ! state
+                state = ! state;
                 console.log("without");
+                fadeOut(el1);
+                fadeOut(el2);
+
             }
             
         }
         function with_unison () {
             if (state) {
-                state = ! state
+                state = ! state;
                 console.log("with unison");
+                
+                fadeIn(el1);
+                fadeIn(el2);
             }
         }
 

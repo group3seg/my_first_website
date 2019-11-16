@@ -563,4 +563,6 @@ div.dark-region p {
 
 .hide-img-feature-animation {
     display: none;
+    opacity: 0;
+    filter: alpha(opacity=40);
 }
