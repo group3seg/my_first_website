@@ -197,9 +197,9 @@ div.dark-region p {
     background-color: rgba(0, 0, 0, 0);
 }
 .icon-img-topnav {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    /*border-radius: 50%;*/
 }
 
 #btn-try-animation {
