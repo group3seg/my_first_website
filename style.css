@@ -196,6 +196,10 @@ div.dark-region p {
     top: 77px;
     background-color: rgba(0, 0, 0, 0);
 }
+.icons-team {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+}
 .icon-img-topnav {
     width: 35px;
     height: 35px;
