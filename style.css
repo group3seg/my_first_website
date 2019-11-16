@@ -538,3 +538,18 @@ div.dark-region p {
 .link {
     text-decoration: none;
 }
+
+.feature-animation-container {
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 150vh;
+    left: 75vw;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 45%;
+    height: 40%;
+    padding: 0px;
+}
