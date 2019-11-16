@@ -26,32 +26,6 @@
 
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-        // Add smooth scrolling to all links
-        $("a").on('click', function (event) {
-
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-                // Prevent default anchor click behavior
-                event.preventDefault();
-
-                // Store hash
-                var hash = this.hash;
-
-                // Using jQuery's animate() method to add smooth page scroll
-                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 800, function () {
-
-                    // Add hash (#) to URL when done scrolling (default click behavior)
-                    window.location.hash = hash;
-                });
-            } // End if
-        });
-    });
-</script>
 
 
 
@@ -115,61 +89,61 @@
     </div>
     <script src="./scripts/typewriter.js"></script>
 
-    <a id="page">
-        <div class="bg-image" style="background-image: url(./images/background/background8.png)"></div>
-    </a>
+    <a id="page"></a>
+    <div class="bg-image" style="background-image: url(./images/background/background8.png)">
 
-    <div class="bottom-region-options team-flex-container">
-        <div class="team-container" style="">
-                <div><img src="./images/team_pictures/sebastien.jpg" class="picture-team"> </div>
-                <div style="color: rgb(216, 0, 223)"><p>SÉBASTIEN GIGARD</p></div>  
-                <div>
-                    <p>Music Composer</p>
-                    <P>Software Developer</P>
-                    
-                </div>
-        </div>
-
-        <div class="team-container" style="">
-                <div><img src="./images/team_pictures/moe.jpeg" class="picture-team"> </div>
-                <div style="color: rgb(216, 0, 223)"><p>MOHAMED BACHROUCH</p></div>  
-                <div>
-                    <p>Music Producer</p>
-                    <p>Web Developer</p>
-                    
-                </div>
-        </div>
-
-        <div class="team-container" style="">
-                <div><img src="./images/team_pictures/geraud_cropped.png" class="picture-team"> </div>
-                <div style="color: rgb(216, 0, 223)"><p>GÉRAUD NDAGANG NGUIMFACK</p></div>  
-                <div>
-                    <p>Quality Assurance</p>
-                </div>
-        </div>
-        <div class="team-container" style="">
-                <div><img src="./images/team_pictures/anisa_cropped.png" class="picture-team"> </div>
-                <div style="color: rgb(216, 0, 223)"><p>ANISA AHMED</p></div>  
-                <div>
-                    <p>Graphic Designer</p>
-                    
-                </div>
-        </div>
-        <div class="team-container" style="">
-                <div><img src="./images/team_pictures/taj.jpg" class="picture-team"> </div>
-                <div style="color: rgb(216, 0, 223)"><p>TAJ LOODU</p></div>  
-                <div>
-                    <p>Marketing Specialist</p>
-                    
-                </div>
-        </div>
-    </div>
-
-    <a href="team.html">
-            <div class="linker2">
-                <p>CONTACT US</p>
+        <div class="bottom-region-options team-flex-container">
+            <div class="team-container" style="">
+                    <div><img src="./images/team_pictures/sebastien.jpg" class="picture-team"> </div>
+                    <div style="color: rgb(216, 0, 223)"><p>SÉBASTIEN GIGARD</p></div>  
+                    <div>
+                        <p>Music Composer</p>
+                        <P>Software Developer</P>
+                        
+                    </div>
             </div>
+
+            <div class="team-container" style="">
+                    <div><img src="./images/team_pictures/moe.jpeg" class="picture-team"> </div>
+                    <div style="color: rgb(216, 0, 223)"><p>MOHAMED BACHROUCH</p></div>  
+                    <div>
+                        <p>Music Producer</p>
+                        <p>Web Developer</p>
+                        
+                    </div>
+            </div>
+
+            <div class="team-container" style="">
+                    <div><img src="./images/team_pictures/geraud_cropped.png" class="picture-team"> </div>
+                    <div style="color: rgb(216, 0, 223)"><p>GÉRAUD NDAGANG NGUIMFACK</p></div>  
+                    <div>
+                        <p>Quality Assurance</p>
+                    </div>
+            </div>
+            <div class="team-container" style="">
+                    <div><img src="./images/team_pictures/anisa_cropped.png" class="picture-team"> </div>
+                    <div style="color: rgb(216, 0, 223)"><p>ANISA AHMED</p></div>  
+                    <div>
+                        <p>Graphic Designer</p>
+                        
+                    </div>
+            </div>
+            <div class="team-container" style="">
+                    <div><img src="./images/team_pictures/taj.jpg" class="picture-team"> </div>
+                    <div style="color: rgb(216, 0, 223)"><p>TAJ LOODU</p></div>  
+                    <div>
+                        <p>Marketing Specialist</p>
+                        
+                    </div>
+            </div>
+        </div>
+
+        <a href="team.html">
+                <div class="linker2">
+                    <p>CONTACT US</p>
+                </div>
         </a>
+    </div>
 
     <!--Bottom navigation bar-->
     <div class="botnav">
@@ -183,6 +157,7 @@
     <script src="./scripts/p5.js"></script>
     <script src="./scripts/p5.dom.js"></script>
     <script src="./scripts/p5.sound.js"></script>
+    <script src="./scripts/scroll_down.js"></script>
     <script src="./scripts/sketch_logo.js"></script>
     <script src="./scripts/sketch_music_visualisation.js"></script>
 </body>

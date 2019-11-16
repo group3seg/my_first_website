@@ -3,7 +3,9 @@
   --canvas-animation-y: 120%;
 }
 
-
+html {
+    scroll-behavior: smooth;
+}
 /* Remove margin from body*/
 body {
     margin:0;
