@@ -20,6 +20,7 @@ div.dark-region h1 {
     font-weight:bold;
     margin: 0px;
     padding-top: 5vh;
+    white-space: nowrap;
 }
 
 /* Style text in top of page */
