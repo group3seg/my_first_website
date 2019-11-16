@@ -197,7 +197,7 @@ div.dark-region p {
     background-color: rgba(0, 0, 0, 0);
 }
 .icons-team {
-    position: relative;
+    position: relative; 
     background-color: rgba(0, 0, 0, 0);
 }
 .icon-img-topnav {
@@ -402,37 +402,21 @@ div.dark-region p {
     transform: translate(-50%, -50%);
     z-index: 2;
     width: 95%;
+    min-width: 100px;
     padding: 50px;
+    letter-spacing: 7px;
+    text-shadow: 2px 2px black;
+    border-radius: 3px;
     display: flex;
-    justify-content: center;
-    text-align: center;
-    letter-spacing: 7px;
-    text-shadow: 2px 2px black;
-    border-radius: 3px;
-}
+    justify-content: space-around;
+    flex-flow: row-reverse wrap;
 
-
-.studios2 {
-    color: white;
-    font-weight: bold;
-    position: absolute;
-    top: 170%;
-    left: 50%;
-    float:left;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 50%;
-    padding: 50px;
-    text-align: center;
-    letter-spacing: 7px;
-    text-shadow: 2px 2px black;
-    border-radius: 3px;
 }
 
 .studio {
     width: min-content;
     height: min-content;
-    margin: 0 auto;
+    margin: 5% auto;
     text-align: center;
     display: flex;
     flex-direction: column;
