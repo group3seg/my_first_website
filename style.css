@@ -150,7 +150,7 @@ div.dark-region p {
 
 .together {
     font-weight: bold;
-    color:rgb(153, 18, 142);
+    color:rgb(177, 18, 18);
 }
 
 /* Style the top navigation links */
@@ -180,7 +180,7 @@ div.dark-region p {
 }
 
 .features {
-    background-image: linear-gradient(rgb(153, 18, 18),rgb(153, 18, 18));
+    background-image: linear-gradient(rgb(177, 18, 18),rgb(177, 18, 18));
 }
 .options {
     background-image: linear-gradient(rgb(25, 125, 165),rgb(18, 50, 153));
@@ -200,7 +200,7 @@ div.dark-region p {
 .icons-topnav {
     position: fixed;
     right: 20px;
-    top: 86px;
+    top: 78px;
     background-color: rgba(0, 0, 0, 0);
     z-index:8;
 }
@@ -212,6 +212,16 @@ div.dark-region p {
     transition: all 0.3s ease;
     color: white;
     font-size: 20px;
+}
+
+.icons-team a {
+    display: block;
+    text-align: center;
+    padding: 1px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+    width:60px;
 }
 
 .facebook {
@@ -431,7 +441,7 @@ div.dark-region p {
     color: white;
     font-weight: bold;
     position: absolute;
-    top: 158%;
+    top: 16%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -534,7 +544,7 @@ div.dark-region p {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
     color: white;
-    border: 3px solid rgb(153, 18, 142);
+    border: 3px solid;
     position: absolute;
     
     top: 186%;
@@ -559,7 +569,7 @@ div.dark-region p {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
     color: white;
-    border: 3px solid rgb(153, 18, 142);
+    border: 3px solid;
     position: absolute;
     
     top: 186%;
