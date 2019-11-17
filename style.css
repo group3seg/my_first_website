@@ -1,7 +1,4 @@
-:root {
-  --canvas-animation-x: 50%;
-  --canvas-animation-y: 120%;
-}
+
 
 html {
     scroll-behavior: smooth;
@@ -135,7 +132,6 @@ div.dark-region p {
     top: 0;
     font-size: 25px;
     background-color:rgb(40, 40, 40);
-    height: 65.5px;
     width: 100%;
     position: fixed;
     display: flex;
@@ -184,10 +180,10 @@ div.dark-region p {
 }
 
 .features {
-    background-image: linear-gradient(rgb(153, 18, 142),rgb(153, 18, 142));
+    background-image: linear-gradient(rgb(153, 18, 18),rgb(153, 18, 18));
 }
 .options {
-    background-image: linear-gradient(rgb(153, 18, 142),rgb(153, 18, 142));
+    background-image: linear-gradient(rgb(25, 125, 165),rgb(18, 50, 153));
 }
 .team {
     background-image: linear-gradient(rgb(153, 18, 142),rgb(153, 18, 142));
