@@ -329,7 +329,7 @@ div.dark-region p {
     text-decoration: none;
     -webkit-transition-duration: 0.4s; /* Safari */
 
-    background-image: linear-gradient(rgb(153, 18, 142),rgb(153, 18, 142));
+    background-image: linear-gradient(rgb(177, 18, 18),rgb(177, 18, 18));
     background-size: 0 5px, auto;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -436,12 +436,11 @@ div.dark-region p {
     max-height: 20vh;
 }
 
-
 .studios1 {
     color: white;
     font-weight: bold;
     position: absolute;
-    top: 16%;
+    top: 160%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
