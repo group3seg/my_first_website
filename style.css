@@ -138,6 +138,7 @@ div.dark-region p {
     justify-content: space-between;
     align-items: center;
     z-index: 99;
+    text-shadow: 2px 2px black;
 }
 .logo-container {
     align-items: center;
@@ -399,6 +400,10 @@ div.dark-region p {
     color: white;
     margin: 1%;
     font-size: 2vh;
+}
+
+.pricing-container {
+    text-shadow: 2px 2px black;
 }
 .pricing-container:hover {
     transform: scale(1.1);
