@@ -200,11 +200,36 @@ div.dark-region p {
 
 }
 .icons-topnav {
-    position: absolute;
-    right: 10px;
-    top: 77px;
+    position: fixed;
+    right: 20px;
+    top: 86px;
     background-color: rgba(0, 0, 0, 0);
 }
+
+.icons-topnav a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+}
+
+.facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
 .icons-team {
     position: relative; 
     background-color: rgba(0, 0, 0, 0);
@@ -212,7 +237,7 @@ div.dark-region p {
 .icon-img-topnav {
     width: 35px;
     height: 35px;
-    margin:10px;
+    margin:1px;
     /*border-radius: 50%;*/
 }
 
