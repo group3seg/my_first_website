@@ -181,13 +181,13 @@ div.dark-region p {
 }
 
 .features {
-    background-image: linear-gradient(rgb(177, 18, 18),rgb(177, 18, 18));
+    background-image: linear-gradient(rgb(219, 110, 110),rgb(177, 18, 18));
 }
 .options {
-    background-image: linear-gradient(rgb(25, 125, 165),rgb(18, 50, 153));
+    background-image: linear-gradient(rgb(50, 108, 184),rgb(18, 50, 153));
 }
 .team {
-    background-image: linear-gradient(rgb(153, 18, 142),rgb(153, 18, 142));
+    background-image: linear-gradient(rgb(224, 121, 216),rgb(153, 18, 142));
 }
 /* Change navigation link color at mouse hover*/
 .underlined-element:hover {
@@ -330,7 +330,7 @@ div.dark-region p {
     text-decoration: none;
     -webkit-transition-duration: 0.4s; /* Safari */
 
-    background-image: linear-gradient(rgb(177, 18, 18),rgb(177, 18, 18));
+    background-image: linear-gradient(rgb(219, 110, 110),rgb(177, 18, 18));
     background-size: 0 5px, auto;
     background-repeat: no-repeat;
     background-position: center bottom;
