@@ -44,7 +44,7 @@ div.dark-region p {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    width: 50%;
+    width: 53%;
     padding: 1.5%;
     text-align: center;
     letter-spacing: 7px;
@@ -199,11 +199,14 @@ div.dark-region p {
 
 
 }
+
+
 .icons-topnav {
     position: fixed;
     right: 20px;
     top: 86px;
     background-color: rgba(0, 0, 0, 0);
+    z-index:8;
 }
 
 .icons-topnav a {
@@ -432,7 +435,7 @@ div.dark-region p {
     color: white;
     font-weight: bold;
     position: absolute;
-    top: 162%;
+    top: 158%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -538,7 +541,32 @@ div.dark-region p {
     border: 3px solid rgb(153, 18, 142);
     position: absolute;
     
-    top: 187%;
+    top: 186%;
+    left: 40%;
+    /*transform: translate(-50%, -50%);*/
+    z-index: 2;
+    width: 18%;
+    padding: 2px;
+
+    text-align: center;
+    transition: all .2s ease-in-out;
+
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px black;
+    box-shadow: 2px 2px black;
+
+    }
+
+
+.linker3 {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    border: 3px solid rgb(153, 18, 142);
+    position: absolute;
+    
+    top: 186%;
     left: 40%;
     /*transform: translate(-50%, -50%);*/
     z-index: 2;
