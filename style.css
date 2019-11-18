@@ -77,7 +77,7 @@ div.dark-region p {
     letter-spacing: 5px;
     text-shadow: 2px 2px black;
     box-shadow: 2px 2px black;
-
+    box-shadow: inset 0px 0px 15px black;
     }
 
 .dark-region-bottom:hover {
@@ -367,6 +367,7 @@ div.dark-region p {
     text-shadow: 2px 2px black;
     border-radius: 3px;
     line-height:25px;
+    box-shadow: inset 0px 0px 15px black;
 }
 
 
@@ -430,6 +431,7 @@ div.dark-region p {
     text-align: center;
     letter-spacing: 4px;
     margin: auto;
+    
 
 }
 .pricing-flex-container {
@@ -447,6 +449,7 @@ div.dark-region p {
     color: white;
     margin: 1%;
     font-size: 2vh;
+    border: 1px solid black;
 }
 
 .pricing-container {
@@ -475,6 +478,7 @@ div.dark-region p {
     box-shadow: inset 0px 0px 4px black;
     letter-spacing: 4px;
     font-weight: bold;
+    border: 1px solid black;
 }
 .team-container:hover {
     transform: scale(1.1);
@@ -613,6 +617,7 @@ div.dark-region p {
     letter-spacing: 5px;
     text-shadow: 2px 2px black;
     box-shadow: 2px 2px black;
+    box-shadow: inset 0px 0px 15px black;
 
     }
 
@@ -651,17 +656,16 @@ div.dark-region p {
 }
 
 .feature-animation-container {
-    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
     position: absolute;
     color: white;
     font-weight: bold;
     position: absolute;
-    top: 150vh;
-    left: 75vw;
+    top: 140vh;
+    left: 70vw;
     transform: translate(-50%, -50%);
     z-index: 2;
-    width: 45%;
-    height: 40%;
+    width: 50%;
+    height: 54%;
     padding: 0px;
 }
 
