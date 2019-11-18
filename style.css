@@ -660,8 +660,8 @@ div.dark-region p {
     color: white;
     font-weight: bold;
     position: absolute;
-    top: 140vh;
-    left: 70vw;
+    top: 163vh;
+    left: 48vw;
     transform: translate(-50%, -50%);
     z-index: 2;
     width: 50%;
