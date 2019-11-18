@@ -264,7 +264,7 @@ const s = ( sketch ) => {
       mic.start();
       micro = new p5.FFT();
       micro.setInput(mic);
-      document.getElementById("btn-try-animation").innerHTML = "Stop";
+      document.getElementById("btn-try-animation").innerHTML = "STOP";
         
     }
     else {
@@ -273,7 +273,7 @@ const s = ( sketch ) => {
       delete mic
       delete micro;
       micro = undefined;
-      document.getElementById("btn-try-animation").innerHTML = "Try the animation yourself!";
+      document.getElementById("btn-try-animation").innerHTML = "TRY THE ANIMATION YOURSELF";
     }
   }
 
