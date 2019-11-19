@@ -197,6 +197,7 @@ div.dark-region p {
 }
 
 
+
 .icons-topnav {
     position: fixed;
     right: 20px;
@@ -378,7 +379,7 @@ div.dark-region p {
     color: white;
     font-weight: bold;
     position: absolute;
-    top: 112%;
+    top: 113%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -431,7 +432,7 @@ div.dark-region p {
     transform: translate(-50%, -50%);
     z-index: 2;
     font-size: 16px;
-    width: 80%;
+    width: 50%;
     padding: 10px;
     text-align: center;
     letter-spacing: 7px;
@@ -485,9 +486,10 @@ div.dark-region p {
     flex: 1 1 0px;
     justify-content: center;
     flex-flow: row wrap;
+    
 }
 .team-container {
-    width: 17%;
+    width: 18%;
     min-width: 20vh;
     padding:20px;
     /*min-width: calc(15vh + 2*(20px));*/
@@ -605,11 +607,9 @@ div.dark-region p {
     color: white;
     border: 3px solid #f1f1f1;
     transition: all .2s ease-in-out;
+    box-shadow: inset 0px 0px 8px black;
 
-}
 
-.select:hover {
-    transform: scale(1.1);
 }
 
 .selector {
