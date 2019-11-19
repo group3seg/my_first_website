@@ -31,7 +31,7 @@
     <div>
         <div class="topnav">
             <a class="text-logo" href="index.html">
-                <div class="logo-container underlined-element" >
+                <div class="logo-container underlined-element">
                     <img class="logo" src="./images/logo_unison/logo24.png" href="index.html" alt="Unison">
                     <div id="topnav-unison-text">UNISON</div>
                 </div>
@@ -43,13 +43,16 @@
             </div>
         </div>
         <div class="icons-topnav">
-            <a href="https://twitter.com/UnisonOttawa" class="twitter"><i class="fa fa-twitter" target="_blank_"></i></a> 
-            <a href="https://www.facebook.com/Unison-103684677769479/" class="facebook"><i class="fa fa-facebook" target="_blank"></i></a> 
-            <a href="https://www.linkedin.com/groups/8854973/" class="linkedin"><i class="fa fa-linkedin" target="_blank"></i></a>
+            <a href="https://twitter.com/UnisonOttawa" class="twitter"><i class="fa fa-twitter"
+                    target="_blank_"></i></a>
+            <a href="https://www.facebook.com/Unison-103684677769479/" class="facebook"><i class="fa fa-facebook"
+                    target="_blank"></i></a>
+            <a href="https://www.linkedin.com/groups/8854973/" class="linkedin"><i class="fa fa-linkedin"
+                    target="_blank"></i></a>
         </div>
         <div id="btn-try-animation" onclick="try_it()">TRY THE ANIMATION YOURSELF</div>
         <div id="myContainer"></div>
-        
+
     </div>
     <!--Title of page: header-->
     <a id="page1"></a>
@@ -69,11 +72,11 @@
             <a href="./options.html#page" class="link">
                 <div class="dark-region-bottom">
                     <p>SEE MORE</p>
-                </div> 
+                </div>
             </a>
         </div>
 
-        <div class="arrow"  >
+        <div class="arrow">
             <a href="#page">
                 <span></span>
                 <span></span>
@@ -82,44 +85,60 @@
         </div>
     </div>
 
-        <div id="myContainer" style="position: absolute; display: flex; background-color: rgba(0, 0, 0, 0); top: calc(100vh - 65.5px - 150px);"></div>
+    <div id="myContainer"
+        style="position: absolute; display: flex; background-color: rgba(0, 0, 0, 0); top: calc(100vh - 65.5px - 150px);">
+    </div>
     </div>
 
 
     <a id="page"></a>
-    <div class="bg-image" style="background-image: url(features.gif)">       
+    <div class="bg-image" style="background-image: url(features.gif)">
         <div class="bottom-region-features">
-            <p>UNISON CONVERTS<span style="color:rgb(177, 18, 18)"> LOCAL DAW FILES </span>TO A<span style="color:rgb(177, 18, 18)"> CROSS-COMPATIBLE </span>INTERMEDIATE PROJECT USING <span style="color:rgb(177, 18, 18)">ARTIFICIAL INTELLIGENCE.</span></p>
-            <p>INTERMEDIATE PROJECTS CAN BE<span style="color:rgb(177, 18, 18)"> SOLD AND BOUGHT </span>ON THE <span style="color:rgb(177, 18, 18)">UNISON MARKETPLACE</span>, THEN MODIFIED ON ANY LOCAL DAW.</p>
+            <p>UNISON CONVERTS<span style="color:rgb(177, 18, 18)"> LOCAL DAW FILES </span>TO A<span
+                    style="color:rgb(177, 18, 18)"> CROSS-COMPATIBLE </span>INTERMEDIATE PROJECT USING <span
+                    style="color:rgb(177, 18, 18)">ARTIFICIAL INTELLIGENCE.</span></p>
+            <p>INTERMEDIATE PROJECTS CAN BE<span style="color:rgb(177, 18, 18)"> SOLD AND BOUGHT </span>ON THE <span
+                    style="color:rgb(177, 18, 18)">UNISON MARKETPLACE</span>, THEN MODIFIED ON ANY LOCAL DAW.</p>
         </div>
 
-        <div class="feature-animation-container" onmouseover="with_unison()" onmouseleave="without_unison()">
-            <img src="./animations/animation_feature_logos.png" class="feature-animation-img" id="img-feature-logos" style="z-index: 3">
-            <img src="./animations/animation_feature_lines.png" class="feature-animation-img" id="img-features-lines" style="z-index: 2">
-            <img src="./animations/animation_feature_unison.png" class="feature-animation-img" id="img-features-unison" style="z-index: 3">
+        <div style="display:flex;">
+            <div class="feature-animation-container" onmouseover="with_unison()" onmouseleave="without_unison()">
+                <img src="./animations/animation_feature_logos.png" class="feature-animation-img" id="img-feature-logos"
+                    style="z-index: 3">
+                <img src="./animations/animation_feature_lines.png" class="feature-animation-img"
+                    id="img-features-lines" style="z-index: 2">
+                <img src="./animations/animation_feature_unison.png" class="feature-animation-img"
+                    id="img-features-unison" style="z-index: 3">
+            </div>
+            <div class="dark-region-bottom"
+                style="top: 130vh; position: absolute; left: 50vw; transform: translate(-50%, -50%);">
+                <p id="feature-information-animation">WITH UNISON<p>
+            </div>
+
+            <img src="./images/ai.png" style="top:150vh; left: 5vw; position: absolute; width: 300px; height: 300px">
+            <img src="./images/marketplace.png"
+                style="top:150vh; right: calc(5vw); position: absolute; width: 300px; height: 300px">
         </div>
-        <div class="dark-region-bottom" style="top: 130vh; position: absolute; left: 50vw; transform: translate(-50%, -50%);">
-            <p id="feature-information-animation">WITH UNISON<p>
-        </div>
+
+
 
         <a href="options.html">
             <div class="dark-region-bottom" style="top: 185vh; position: absolute; left: 40vw">
                 <p>START NOW</p>
             </div>
         </a>
-        <img src="./images/ai.png" style="top:150vh; left: 5vw; position: absolute; width: 300px; height: 300px">
-        <img src="./images/marketplace.png" style="top:150vh; right: calc(5vw); position: absolute; width: 300px; height: 300px">
+
     </div>
 
 
 
     <!--Bottom navigation bar-->
     <div class="botnav">
-            <a style="float: right" href="#">CONTACT</a>
-            <a style="float: right" href="#">TERMS AND CONDITIONS</a>
-            <a style="float: right" href="#">PRIVACY</a>
-            <a style="float: left" href="#">COPYRIGHT &copy; UNISON 2019</a>
-        </div>
+        <a style="float: right" href="#">CONTACT</a>
+        <a style="float: right" href="#">TERMS AND CONDITIONS</a>
+        <a style="float: right" href="#">PRIVACY</a>
+        <a style="float: left" href="#">COPYRIGHT &copy; UNISON 2019</a>
+    </div>
 
     <script src="./scripts/data.js"></script>
     <script src="./scripts/p5.js"></script>
@@ -151,33 +170,33 @@
             };
             tick();
         }
-        function without_unison(){
+        function without_unison() {
             el1 = document.getElementById("img-features-lines");
             el2 = document.getElementById("img-features-unison");
             p = document.getElementById("feature-information-animation")
-            if (! state) {
-                state = ! state;
+            if (!state) {
+                state = !state;
                 console.log("without");
                 fadeOut(el1);
                 fadeOut(el2);
                 p.innerHTML = "WITHOUT UNISON";
-                
+
 
             }
-            
+
         }
-        function with_unison () {
+        function with_unison() {
             if (state) {
-                state = ! state;
+                state = !state;
                 console.log("with unison");
-                
+
                 fadeIn(el1);
                 fadeIn(el2);
                 p.innerHTML = "WITH UNISON";
             }
         }
 
-        
+
     </script>
 
 </body>
@@ -186,7 +205,7 @@
 
 
 
-   <!-- <div class="icon" id="logo0" style="top: calc(var(--canvas-animation-y) + 9%); left: calc(var(--canvas-animation-x) + 12%); " >
+<!-- <div class="icon" id="logo0" style="top: calc(var(--canvas-animation-y) + 9%); left: calc(var(--canvas-animation-x) + 12%); " >
             <img src="./images/icon/icon.png" alt="Icon" class="icon-img">
             <div class="icon-text">Noah<br>
             Cubase</div>
