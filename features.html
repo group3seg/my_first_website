@@ -107,14 +107,11 @@
                 <img src="./animations/animation_feature_unison.png" class="feature-animation-img"
                     id="img-features-unison" style="z-index: 3">
             </div>
-            <div class="dark-region-bottom"
-                style="top: 130vh; position: absolute; left: 50vw; transform: translate(-50%, -50%);">
-                <p id="feature-information-animation">WITH UNISON<p>
-            </div>
+            
 
-            <img src="./images/ai.png" style="top:150vh; left: 5vw; position: absolute; width: 300px; height: 300px">
+            <img src="./images/ai.png" style="top:150vh; left: 5vw; position: absolute; width: 200px; height: auto">
             <img src="./images/marketplace.png"
-                style="top:150vh; right: calc(5vw); position: absolute; width: 300px; height: 300px">
+                style="top:150vh; right: calc(5vw); position: absolute; width: 200px; height: auto">
         </div>
 
 
@@ -170,13 +167,11 @@
         function without_unison() {
             el1 = document.getElementById("img-features-lines");
             el2 = document.getElementById("img-features-unison");
-            p = document.getElementById("feature-information-animation")
             if (!state) {
                 state = !state;
                 console.log("without");
                 fadeOut(el1);
                 fadeOut(el2);
-                p.innerHTML = "WITHOUT UNISON";
 
 
             }
@@ -189,7 +184,6 @@
 
                 fadeIn(el1);
                 fadeIn(el2);
-                p.innerHTML = "WITH UNISON";
             }
         }
 
