@@ -80,7 +80,7 @@ div.dark-region p {
 }
 
 .dark-region-bottom:hover {
-    transform: scale(1.1) translate(-50%, -50%);
+    transform: scale(1.1);
 }
 
 .dark-region-bottom-container {
@@ -685,6 +685,8 @@ div.dark-region p {
     width: calc((960px)/2 + 30vw);
     height: calc(((540px)/2 + 30vh));
     padding: 0px;
+    min-width: 500px;
+
 
 }
 
@@ -692,7 +694,9 @@ div.dark-region p {
     position: absolute;
     width: calc((960px)/2 + 30vw);
     height: calc(((540px)/2 + 30vh));
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 0%);
+    min-width: 200px;
+
 
 }
 
@@ -704,10 +708,11 @@ div.dark-region p {
 
 .feature-animation-flex-container {
     display: flex;
+    position: absolute;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     height: min-content;
-    top: 150vh;
+    top: 130vh;
 }
