@@ -130,7 +130,7 @@ div.dark-region p {
     overflow:hidden;
     top: 0;
     font-size: 25px;
-    background-color:rgb(40, 40, 40);
+    background-image: linear-gradient(rgb(68, 68, 68), rgb(40,40,40));    
     width: 100%;
     position: fixed;
     display: flex;
