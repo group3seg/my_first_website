@@ -5,16 +5,16 @@ PROJECT NAME:
 Unison
 
 ORGANIZATION GITHUB ACCOUNT:
-https://github.com/intelligentofficial
+https://github.com/unison-inc-uottawa
 
 REPOSITORIES GITHUB ACCOUNT:
-https://github.com/intelligentofficial/unison
+https://github.com/unison-inc-uottawa/unison
 
 PROJECT WEBSITE:
-https://intelligentofficial.github.io/unison/
+https://unison-inc-uottawa.github.io/unison/
 
 README.md:
-https://github.com/intelligentofficial/unison/blob/master/README.md
+https://github.com/unison-inc-uottawa/unison/blob/master/README.md
 
 PROJECT DESCRIPTION:
 Unison is an online cross-compatible platform that offers musicians (producers, sound engineers, songwriters, vocalists, etc.) a cloud-based collaborative environment. It allows musicians to publicly or privately share their DAW-based projects (digital audio workstation) on the cloud, allowing anyone to edit their own version.
