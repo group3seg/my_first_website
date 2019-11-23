@@ -14,16 +14,16 @@ Features:
 - You can work on branches and versions of the same project and merge them into one final project.
 
 ### [Organization GitHub Account:](https://github.com/intelligentofficial)
-https://github.com/intelligentofficial
+https://github.com/unison-inc-uottawa
 
 ### [Repositories GitHub Account:](https://github.com/intelligentofficial/unison)
-https://github.com/intelligentofficial/unison
+https://github.com/unison-inc-uottawa/unison
 
 ### [Project Website:](https://intelligentofficial.github.io/unison/)
-https://intelligentofficial.github.io/unison/
+https://unison-inc-uottawa.github.io/unison/
 
 ### [README.md:](https://github.com/intelligentofficial/unison/blob/master/README.md)
-https://github.com/intelligentofficial/unison/blob/master/README.md
+https://github.com/unison-inc-uottawa/unison/blob/master/README.md
 
 
 ### Members' Accounts:
