@@ -12,7 +12,7 @@ const s = ( sketch ) => {
   var wanted_height = 150;
   var wanted_width = document.body.clientWidth;
 
-  var data_resolution = 19;
+  var data_resolution = 9;
 
   var bar_idx = 0;
   var bars = [];

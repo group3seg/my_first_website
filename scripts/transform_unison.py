@@ -14,7 +14,7 @@ threshInv = threshInv / 255
 cv2.imshow('img', threshInv)
 print(threshInv.shape)
 
-
+print(threshInv)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
