@@ -41,54 +41,66 @@ const s = ( sketch ) => {
       // Code is here
       // get the spectrum
       if (typeof micro === 'undefined'){
+        /* if the micro is undefined then get the data from the data variable */
         if (index >= data.length){index = 0;} //reset the animation at the end
         var spectrum = data[index];
-        index++;
+        index++; // increase the time
       }
       else {
-        var spectrum = micro.analyze().map(function(x) { return x * 100; });
+        var spectrum = micro.analyze().map(function(x) { return x * 100; }); // take the spectrum form the mic if we can
       }
       
       
       // initialize things
-      sketch.background("rgba(58, 58, 58, 0.01)");
+      //sketch.background("rgba(58, 58, 58, 0)"); // do noting because we edit the pixels after
       sketch.colorMode(sketch.HSB, 255, 255, 255);
     
       bar_idx = 0;
 
       let yoff = 1;
-      sketch.loadPixels();
+      sketch.loadPixels(); //loads all the pixels and store them in the sketch.pixels variable
 
+      // minimum and maximum values of the spectrum
       var temp_min = Math.min.apply(Math, spectrum);
       var temp_max = Math.max.apply(Math, spectrum);
       
+      // change progressively the maximum and minimum variables
       maximum = maximum - ((maximum - temp_max)/5);
       minimum = minimum - ((minimum - temp_min)/5);
 
+      // if need to show the text
       if (Math.round((time+5)*100)/100 == 60){
         unison_trigger_animation = true;
         unison_animation = true;
         unison_finish_animation = false;
       }
+      // if we want to end the text and show the music spectrum
       else if (time >= 65){
         time = 0;
+        // for memory
         xoff = 0;
         yoff = 0;
+
         unison_animation = false;
         unison_trigger_animation = false;
         unison_finish_animation = true;
       }
+      // we want to show the spectrum
       else {
         unison_trigger_animation = false;
         unison_finish_animation = false;
         unison_animation = false;
       }
       
-
+      // loop over each pexels on the x axis
       for (let new_x = 0; new_x < sketch.width; new_x += 1) {
         var is_bar = false;
+
+        // if the pixel is part of vertical line
         if (new_x % data_resolution == 0){
           is_bar = true;
+
+          // get the index of the value we want in the data array
           var min_bef = 0;
           var max_bef = wanted_width;
           var min_aft = 0;
@@ -98,37 +110,46 @@ const s = ( sketch ) => {
 
           var xoff = 1;
 
-
-
-
-
+          // get the height of the bar
           var bar_height = sketch.map(Math.round(spectrum[x_data]), minimum, maximum, wanted_height, 0);
+          
+          // if it is the first time we run the code and the list of bars is not made yet
           if (typeof bars[bar_idx] === 'undefined'){
             let vertical_arr_unison = Array();
 
+            // fill the binary array that will contain all the necessary values for each Bar object to show the unison text on the screen
+            let y = Math.round(sketch.map(new_x, 0, sketch.width, 0, data1[0].length-1));
             for (let height_unison = 0; height_unison < sketch.height; height_unison++){
               let x = Math.round(sketch.map(height_unison, 0, sketch.height, 0, data1.length-1));
-              let y = Math.round(sketch.map(new_x, 0, sketch.width, 0, data1[0].length-1));
-              vertical_arr_unison[height_unison] = data1[x][y];
+              vertical_arr_unison[height_unison] = data1[x][y]; // for the unison animation
             }
             
-
+            // create Bar object and put it into the bars array
             bars[bar_idx] = new Bar(sketch.height, vertical_arr_unison, bar_idx);
           }
+          // if the bar is already defined
+          // we want to update the status of the bar
           else{
+            // check if the trigger_animation event is triggered
             if (unison_trigger_animation){
+              // change the state
               bars[bar_idx].state = 1
-              bars[bar_idx].update_pixels_with_state(bar_height);
             }
             else {
+              // check if the finish_animation event is triggered
               if(unison_finish_animation == true){
+                // change the state
                 bars[bar_idx].state = 4;
               }
-              bars[bar_idx].update_pixels_with_state(bar_height);
             }
+            // update the bar
+            bars[bar_idx].update_pixels_with_state(bar_height);
             
           }
+
+          // get the HSB color of the bar according to his location in the canvas
           var col = sketch.color(sketch.map(new_x, 0, wanted_width, 0, 235), 255, 255);
+          // convert this color into the rgb colorspace
           var r = sketch.red(col);
           var g = sketch.green(col);
           var b = sketch.blue(col);
@@ -187,7 +208,17 @@ const s = ( sketch ) => {
     this.count_wait_time = 0
     this.speed = 10;
 
+    /*
+    State 0 ; Update everything without the unison text
+    State 1 : Lower the bar. When done, go to state 2
+    State 2 : Rase the bar to max with the unsion text
+    State 4 : Stay up and wait for a while. When ready, lower the bar. After, go to state 3
+    State 3 : Raise the bar to the value of the spectrum and go to state 0
+    */
+
+    // function that handle the update of the bar
     this.update_pixels_with_state = function(h){
+      // default state
       if (this.state == 0){
         this.h = h;
         this.update_pixels();
@@ -222,6 +253,7 @@ const s = ( sketch ) => {
         }
       }
     }
+    // default function to update each pixels without the unison text
     this.update_pixels = function() {
       for (let e = 0; e < this.max_h ; e++){
         if (e > this.h) {
@@ -234,6 +266,7 @@ const s = ( sketch ) => {
         }
       }
     }
+    // default funcion to update each pixels with the unison text
     this.update_pixels_with_unison = function() {
       for (let e = 0; e < this.max_h ; e++){
         if (e > this.h) {
@@ -248,7 +281,6 @@ const s = ( sketch ) => {
     }
 
     
-    // }
     this.get_pixel = function(y){
       return this.arr[y];
     }
