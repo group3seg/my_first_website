@@ -213,7 +213,7 @@ const s = ( sketch ) => {
     State 1 : Lower the bar. When done, go to state 2
     State 2 : Rase the bar to max with the unsion text
     State 4 : Stay up and wait for a while. When ready, lower the bar. After, go to state 3
-    State 3 : Raise the bar to the value of the spectrum and go to state 0
+    State 3 : Lower the bar to the value of the spectrum and go to state 0
     */
 
     // function that handle the update of the bar
