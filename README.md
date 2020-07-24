@@ -28,7 +28,7 @@ https://github.com/unison-inc-uottawa/unison/blob/master/README.md
 
 ### Members' Accounts:
  - Géraud Ndagang Nguimfack: [NNG2000](https://github.com/NNG2000)
- - Mohamed Bachrouch (8160410): [moebachrouch](https://github.com/moebachrouch)
- - Sébastien Girard (300133000): [sebastiengrd](https://github.com/sebastiengrd)
+ - Mohamed Bachrouch : [moebachrouch](https://github.com/moebachrouch)
+ - Sébastien Girard : [sebastiengrd](https://github.com/sebastiengrd)
  - Anisa Y Ahmed: [anisayac](https://github.com/anisayac)
  - Taj Loodu: [tloodu](https://github.com/tloodu)
